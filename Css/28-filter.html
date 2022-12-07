@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        img {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            filter: brightness(1.2) contrast(1.2) grayscale(0.3) hue-rotate(1deg) saturate(.5);
+            filter: drop-shadow(0 0 10px red);
+            /* transparan bir görsele box-shadow ile gölge vermeye çalışırsam 4 kenardan verebilir sadece , ama filter : drop-shadow ile resmin kendi sınırlarına gölge verebilirim. */
+        }
+        /* arka plana siyah zemin ayarlıyoruz.
+            .image::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6)
+        } */
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="image">
+            <img src="img/bg.jpeg" alt="">
+        </div>
+
+    </div>
+
+
+</body>
+
+
+</html>

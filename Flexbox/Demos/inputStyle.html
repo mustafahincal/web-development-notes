@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .input-text {
+            margin: 30px;
+            display: inline-flex;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .input-text label {
+            height: 40px;
+            padding: 0 15px;
+            font-size: 16px;
+            border-right: 1px solid #ddd;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+        }
+        
+        .input-text input {
+            padding: 0 15px;
+            font-size: 15px;
+            outline: none;
+            width: 150px;
+        }
+        
+        .input-text:focus-within {
+            border-color: rebeccapurple;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="input-text">
+        <input type="text" name="email" id="email">
+        <label for="email">@gmail.com</label>
+    </div>
+
+    <div class="input-text">
+        <label for="amount">Amount</label>
+        <input type="text" name="amount" id="amount">
+    </div>
+</body>
+
+</html>

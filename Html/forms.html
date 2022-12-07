@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+ <!--Görevi, <form> ... </form> etiketleri içinde bulunan html kontrolleri aracılığıyla
+kullanıcılardan toplanan bilgileri server'a göndermektir.-->
+
+<body>
+    
+    <form action="/Home/Register"> <!-- action form un nereye gönderileceğini gösterir.-->
+        <p>
+            Ad <input type="text" name="ad" placeholder="adınızı giriniz" required> 
+        </p>
+        <!-- required ekleyerek en sonda kaydet e basınca ve ad kısmı boş bırakıldığında
+        bize bir bildiri gösterir.-->
+
+        <!-- Hangi kontrolün içine hangi kontrolün girildiğini server kodu algılaması
+        için name ile o kontrolü özelleştiriyoruz.-->
+
+        <p>
+            Soyad <input type="text" name="soyad" placeholder="soyadınızı giriniz" required>
+        </p>
+
+        <p>
+            Yaş <input type="number" name="yaş" min="10" max="20"  placeholder="yaşınızı giriniz">
+        </p>
+
+        <p>
+            Eposta <input type="email" name="mail">
+            <!-- buraya mustafa girersek bize bildiri verir yanlış olduğuna dair
+            çünkü tip i email olması lazım.-->
+        </p>
+
+        <p>
+            Beni Hatırla <input type="checkbox" required>
+        </p>
+
+        <p>
+            Erkek <input type="radio" name="cinsiyet">
+            Kadın <input type="radio" name="cinsiyet">
+            <!-- name eklemek cinsiyet ismine ait tek bir şey olacağını gösterir
+            yani hem erkek hem kadını secemeyiz.
+            name koymassak ikiside secilebilir.-->
+        </p>
+
+        <p>
+            Hobilerim <br>
+            Yüzmek <input type="checkbox" name="hobi" >
+            Spor Yapmak <input type="checkbox" name="hobi" >
+            Kitap Okumak <input type="checkbox" name="hobi" >
+
+            <!-- burda 3 ünüde secebiliriz ama type radio olsaydı sadece birini
+            secebilirdik.-->
+        </p>
+
+        <p>
+            <select>
+                <option>İstanbul</option>
+                <option>Konya</option>
+                <option>Ankara</option>
+                <option>İzmir</option>
+                <option>Bursa</option>
+            </select>
+        </p>
+
+        <p>
+            <select multiple>
+                <option>İstanbul</option>
+                <option>Konya</option>
+                <option>Ankara</option>
+            </select>
+        </p>
+
+        <p>
+            <textarea name="message" id="message" cols="30" rows="20" placeholder="mesajlarınızı iletebilirsiniz"></textarea>
+        </p>
+
+        <button type="reset">Sıfırla</button> <!-- bunu input içinde type reset diye de yapabiliriz button olarakda.-->
+        <input type="submit" value="Kaydet"> 
+        <!-- form u en son bununla göndereceğiz.-->
+
+    </form>
+
+
+
+   
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,21 @@
+#contaniner {
+    width: 1140px;
+    background-color: rgb(212, 157, 157);
+    /* ana cercevemize belli sabit bir genişlik verdik.*/
+}
+
+#blog-post-contaniner {
+    background-color: rgb(202, 179, 179);
+    width: 75%;
+    /* ana cercevemiz içinde 2 tane div i yan yana getircez . Bu yüzden genişlikleri
+    75% ve 25% yapmalıyız. */
+}
+
+#other-posts {
+    background-color: rgb(221, 209, 160);
+    width: 25%;
+}
+
+#author-box {
+    border: 1px solid gray;
+}

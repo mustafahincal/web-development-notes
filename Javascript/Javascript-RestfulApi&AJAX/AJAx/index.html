@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+</head>
+
+<body>
+
+    <input type="button" value="Show" onClick="XmlDocument();">
+    <div id="result">
+
+    </div>
+    <script>
+        function XmlDocument() {
+            let xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (this.status == 200 && this.readyState == 4) {
+                    document.querySelector("#result").innerHTML = this.responseText;
+                }
+            };
+            xhr.open("GET", "info.txt", true); // info.txt'ye git onu aç ve kullan
+            xhr.send(); // ve cevabı geri gönder
+        }
+    </script>
+</body>
+
+</html>

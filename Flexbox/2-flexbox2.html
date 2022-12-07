@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            background-color: #034f84;
+            padding: 15px;
+            display: flex;
+            align-items: baseline;
+            height: 1200px;
+            /* 
+                flex-direction:row; varsayılan özellikte iken justify ile yatay , align ile dikey hizalamayı yapıyorduk. 
+            ama flex-direction:column; yaparsak tam tersi olur , justify ile dikey , align ile yatay hizalama yaparız.
+            */
+        }
+        /*
+        Yatay da sıralama justify-content ile yapılır.( flex-direction:row; iken )
+            justify-content:center;             div'ler x ekseni merkezde ortalanır.
+            justify-content:flex-start;         div'ler başlangıcdan itibaren sıralanır. 
+            justify-content:flex-end;           div'ler sondan itibaren sıralanır. 
+            justify-content:space-between;      div'ler arasında eşit boşluklar olacak şekilde baştan sona kadar sıralanır.
+            justify-content:space-around;       space-between de ilk div ve son div baş ve son a yapışık halde olur.
+                                            space-around da ise div'ler arasındaki boşluğun yarısı kadar baş ve sondan da boşluk konulur.     
+            justify-content:space-evenly;       baştan sondan ve div'lerin arasındaki boşluklar eşit olacak şekilde sıralanır.
+
+        Dikey de sıralama align-items ile yapılır.( flex-direction:row; iken )
+            align-items:stretch;                varsayılan özelliktir , herhangi bir div'in yüksekliğini artırırsak diğerleri de ona uyar. elemanlar container'in yüksekliğini alır.
+            align-items:center;                 div'ler container'ın y ekseninin ortasından sağ tarafa doğru sıralanır. 
+            align-items:flex-start;             div'ler container'ın üstünden sağ tarafa doğru sıralanır.
+            align-items:flex-end;               div'ler container'ın altından sağ tarafa doğru sıralanır.
+            align-items:baseline;               div'ler içlerinde ki içeriklerin alt sınırına göre hizalanır.
+
+
+        */
+        
+        .item {
+            background-color: #f7786b;
+            padding: 30px;
+            margin: 20px;
+            color: #fff;
+            font-size: 25px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="item">item 1</div>
+        <div class="item i2">item 2</div>
+        <div class="item">item 3</div>
+        <div class="item i4">item 4</div>
+        <div class="item">item 5</div>
+
+
+
+
+
+
+    </div>
+
+
+</body>
+
+</html>

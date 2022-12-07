@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            background-color: #034f84;
+            padding: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            /* align-items uygulanabilmesi için container'in yüksekliği olması gerek. */
+            align-items: center;
+        }
+        /* 
+            display:flex;                    yaptığımız zaman container içindeki div'ler inline-block gibi davranır.
+
+            display:inline-flex;    normalde flex özelliği verdiğimiz container genel olarak block gibi davranır yani kendisinden sonra gelen elemanı aşağıdan başlatır. inline-flex verirsek
+            inline-block gibi davranır 
+            
+            flex-direction:row;              varsayılan özelliktir , container içindeki div'ler baş tarafdan sıralanır. 
+            flex-direction:row-reverse;      div'ler container sonundan itibaren hizanalanmaya başlar.
+            flex-direction:column;           her div bulunduğu satırı kaplar , yukardan aşağıya hizalanır. 
+            flex-direction:column-reverse;   bu sefer aşağıdan yukarı hizanalanır yani item 4 en üst de olur.  
+
+
+            flex-wrap:nowrap;                varsayılan özelliktir , div'ler tüm satıra sığdırılmaya çalışılır bir yere kadar genişlikleri düşürür bunu başarır ancak ilerde görüntü bozulur. 
+            flex-wrap:wrap;                  sığmayan div'ler , sonra dan eklediğimiz fazla div'ler aşağıdan devam eder.      
+            flex-wrap:wrap-reverse;          div'leri yerleştirmeye en sondan başlar fazla div'ler üst de kalır.  
+            
+                                    
+        */
+        
+        .item {
+            background-color: #f7786b;
+            padding: 30px;
+            margin: 20px;
+            color: #fff;
+            font-size: 25px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="item">item 1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3</div>
+
+
+    </div>
+
+
+</body>
+
+</html>

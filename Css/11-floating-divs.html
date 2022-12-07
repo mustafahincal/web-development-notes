@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Floating Divs</title>
+
+    <style>
+
+        #container{
+            background-color: grey;
+            /* nesnelere floating uyguladığımız zaman normal akışın dışına cıkmış oluyor
+            ve arka plan rengi kayboluyor. bunu yine overflow ile düzeltebiliriz. veya
+            daha farklı bir şekilde .*/
+        }
+
+        /*
+        .clearfix {
+            overflow: auto;
+        }
+        veya sıkıntılı olan div den sonra şunu eklersek;
+
+        <div style="clear: both;" ></div>
+        
+        böyle boş bir div eklersek de sorun çözülür. 
+
+        */
+        .clearfix:after {
+            content:"";
+            display: block;
+            clear: both;
+        }
+
+        .box {
+            width: 170px;
+            height: 170px;
+            margin: 2px;
+        }
+
+        #first {
+            background-color: red;
+            float: left;
+        }
+
+        #second {
+            background-color: blue;
+            float: left;
+        }
+
+        #third {
+            background-color: green;
+            float: left;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="container" class="clearfix">
+        <div id="first" class="box"></div>
+        <div id="second" class="box"></div>
+        <div id="third" class="box"></div>
+    </div>
+
+</body>
+
+</html>

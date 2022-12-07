@@ -1,0 +1,1 @@
+Sunucudan veri alma işlemi başarılı.

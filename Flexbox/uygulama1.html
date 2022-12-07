@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox - Navbar</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav {
+            background-color: goldenrod;
+        }
+        
+        .navigation {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        .navigation a {
+            text-decoration: none;
+            display: block;
+            padding: 15px;
+            color: #fff;
+        }
+        
+        .navigation a:hover {
+            background-color: rgb(233, 184, 61);
+        }
+        
+        @media (max-width:800px) {
+            .navigation {
+                justify-content: space-around;
+            }
+        }
+        
+        @media (max-width:600px) {
+            .navigation {
+                flex-direction: column;
+            }
+            .navigation a {
+                text-align: center;
+                padding: 10px;
+                border-top: 1px solid rgba(255, 255, 255, 0.3);
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            }
+            .navigation li:last-child a {
+                border-bottom: none;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav>
+
+        <a href="#">Logo</a>
+        <ul class="navigation">
+            <li>
+                <a href="#">Home</a>
+            </li>
+
+            <li>
+                <a href="#">About</a>
+            </li>
+
+            <li>
+                <a href="#">Products</a>
+            </li>
+
+            <li>
+                <a href="#">Contact</a>
+            </li>
+
+        </ul>
+
+        </div>
+
+
+
+</body>
+
+</html>

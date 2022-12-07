@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Padding</title>
+    <!-- margin dış kısım padding iç kısım gibi düşünebiliriz.-->
+
+
+    <style>
+
+        .box {
+            width: 120px;
+            height: 120px;
+            background-color: lightgray;
+            float: left;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        #first {
+            border: 2px solid rgb(221, 102, 120); 
+        /*
+            border-width: 2px;
+            border-style: solid;  böyle ayrı ayrı da yapabiliriz.
+            border-color: red;
+        */
+
+        }
+
+        #second {
+            border-top-width: 3px;
+            border-right-width: 4px;
+            border-left-width: 5px;
+            border-bottom-width: 6px;
+
+            border-top-style: solid;
+            border-left-style: dashed;
+            border-bottom-style: groove;
+            border-right-style: double;
+
+            border-top-color: rgb(57, 112, 57);
+            border-right-color: red;
+            border-bottom-color: blue;
+            border-left-color: purple;
+
+            /* böyle teeek teek hepsini belirleyebiliriz. */
+        }
+
+        #third {
+            border: 4px solid rgb(86, 179, 86);
+            border-radius: 20px; /* böylece cevresini yuvarlatabiliriz 50% dersek cember olur.*/
+            /* border-left-radius diyerek de istedğimiz köşeleri yuvarlatabiliriz. */
+        }
+
+        #msgbox{
+            background-color: rgb(214, 119, 119);
+            border-left: 8px solid green;
+            margin: 10px;
+            padding: 20px;
+            color: white;
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="box" id="first">box 1</div>
+
+    <div class="box" id="second">box 2</div>
+
+    <div class="box" id="third">box 3</div>
+
+    <div style="clear: both;"></div> <!-- yukarda floating uygulayınca ekstra bir div
+    ekleyince görüntü bozuluyor o yüzden bir div e clear uygulayarak ekledik.-->
+
+    <div id="msgbox">
+        Message Box
+    </div>
+
+</body>
+
+</html>

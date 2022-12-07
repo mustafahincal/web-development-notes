@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Text Align & Display</title>
+    <style>
+        .d-inline-block {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body class="p-5">
+
+    <!-- 
+        text-justify ile metnin satırları sınırlanara yaklaşır boşluk olmaz.
+        text-right.. ile metnimizi sağ sola ve merkez olarak belirleyebiliriz.
+    -->
+
+    <p class="text-justify">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae debitis numquam facere ullam voluptate saepe nemo? Veritatis cum facilis atque commodi voluptates, expedita voluptatem, necessitatibus ullam quod a autem doloremque? Lorem ipsum dolor sit
+        amet consectetur, adipisicing elit. Blanditiis quidem voluptatum, quasi provident minima sequi fuga qui iusto nesciunt quia eveniet doloremque quaerat debitis delectus quisquam autem. Veniam, modi laborum.
+    </p>
+
+    <p class="text-left">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae debitis numquam facere ullam voluptate saepe nemo? Veritatis cum facilis atque commodi voluptates, expedita voluptatem, necessitatibus ullam quod a autem doloremque? Lorem ipsum dolor sit
+        amet consectetur, adipisicing elit. Blanditiis quidem voluptatum, quasi provident minima sequi fuga qui iusto nesciunt quia eveniet doloremque quaerat debitis delectus quisquam autem. Veniam, modi laborum.
+    </p>
+
+    <p class="text-right">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae debitis numquam facere ullam voluptate saepe nemo? Veritatis cum facilis atque commodi voluptates, expedita voluptatem, necessitatibus ullam quod a autem doloremque? Lorem ipsum dolor sit
+        amet consectetur, adipisicing elit. Blanditiis quidem voluptatum, quasi provident minima sequi fuga qui iusto nesciunt quia eveniet doloremque quaerat debitis delectus quisquam autem. Veniam, modi laborum.
+    </p>
+
+    <p class="text-center">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae debitis numquam facere ullam voluptate saepe nemo? Veritatis cum facilis atque commodi voluptates, expedita voluptatem, necessitatibus ullam quod a autem doloremque? Lorem ipsum dolor sit
+        amet consectetur, adipisicing elit. Blanditiis quidem voluptatum, quasi provident minima sequi fuga qui iusto nesciunt quia eveniet doloremque quaerat debitis delectus quisquam autem. Veniam, modi laborum.
+    </p>
+
+    <blockquote class="blockquote">
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur similique laboriosam facilis deleniti laudantium, accusamus architecto eveniet error nostrum maxime, aspernatur perferendis dolores nobis sit. Inventore nemo odit dolores debitis quis,
+            quo repudiandae omnis ducimus nobis neque tempore tenetur impedit!
+        </p>
+
+        <footer class="blockquote-footer">Mustafa Hıncal</footer>
+
+    </blockquote>
+
+    <blockquote class="blockquote text-center">
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur similique laboriosam facilis deleniti laudantium, accusamus architecto eveniet error nostrum maxime, aspernatur perferendis dolores nobis sit. Inventore nemo odit dolores debitis quis,
+            quo repudiandae omnis ducimus nobis neque tempore tenetur impedit!
+        </p>
+
+        <footer class="blockquote-footer">Mustafa Hıncal</footer>
+
+    </blockquote>
+
+    <br><br>
+
+    <!-- d-block diyerek inline etiket olan span'ı block element yaptık.-->
+
+    <span class="d-block bg-danger mb-2">d-block</span>
+    <span class="d-block bg-danger">d-block</span>
+
+    <br><br>
+
+    <!-- d-inline diyerek inline etiket olan div'i inline element yaptık.-->
+
+    <div class="d-inline bg-success">d-inline</div>
+    <div class="d-inline bg-success">d-inline</div>
+
+    <br><br>
+
+    <div class="d-inline-block bg-primary">
+
+        <h3>Product Name</h3>
+        Description
+
+    </div>
+
+    <div class="d-inline-block bg-primary">
+
+        <h3>Product Name</h3>
+        Description
+
+    </div>
+
+    <br><br>
+
+    <!-- 
+        d-none yaparsak display none yapmış oluruz ve div'imiz görünmez hem bir de yer kaplamaz.
+    bu bazen istemediğimiz bir şey olabilir.
+        biz hem görünmez olsun hem de yer kaplasın istersek invisible kullanabiliriz.
+        bunu normal css de yazarken visibility:hidden; dememiz yeterli.
+    -->
+
+    <div class="d-none bg-success">d-none</div>
+    <div>
+        <div class="invisible bg-success " style="height: 100px;">invisible</div>
+    </div>
+
+
+    <div class="d-inline-block bg-primary">
+
+        <h3>Product Name</h3>
+        Description
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+
+</html>

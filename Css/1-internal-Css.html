@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Internal Css</title>
+
+    <style>
+      h1 {
+        color: blue;
+        font-size: 50px;
+        text-align: center;
+      }
+
+      p {
+        color: orange;
+        font-size: 20px;
+        text-align: right;
+      }
+    </style>
+  </head>
+
+  <!-- Sayfa içinde head kısmın da style etiketi oluşturup
+css kod yazma işlemine internal css diyoruz.
+    Bu sayfada yazdığımız css kodları yalnızca bu sayfayı 
+ilgilendiriyorsa böyle yazmak mantıklı. -->
+
+  <body></body>
+  <script>
+    function initButton() {
+      var body = document.body,
+        button;
+
+      for (var i = 0; i < 5; i++) {
+        button = document.createElement("button");
+        button.innerHTML = `Button ${i}`;
+        button.addEventListener("click", function () {
+          alert(i);
+        });
+        body.appendChild(button);
+      }
+    }
+    initButton();
+
+    const test = () => {
+      for (let i = 0; i < 10; i++) {
+        var number = 2;
+      }
+      console.log(number);
+    };
+    test();
+  </script>
+</html>

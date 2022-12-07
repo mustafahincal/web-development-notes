@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Uygulaması</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    .header {
+        background-color: #DAA520;
+        text-align: center;
+        color: #fff;
+        padding: 40px;
+    }
+    
+    .header h1 {
+        margin-bottom: 10px;
+    }
+    
+    .navbar {
+        background-color: #333;
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        padding: 17px;
+    }
+    
+    .navbar a:hover {
+        color: #333;
+        background-color: rgb(230, 230, 230);
+    }
+    
+    .text {
+        background-color: rgb(173, 173, 173);
+        margin-bottom: 20px;
+    }
+    
+    #main {
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+    #sidebar {
+        flex: 25%;
+        background-color: #F1F1F1;
+        padding: 20px;
+        order: 1;
+    }
+    
+    #content {
+        flex: 75%;
+        padding: 20px;
+    }
+    
+    .header-second {
+        margin-top: 25px;
+    }
+    
+    .piece {
+        margin: 20px 0;
+    }
+    
+    @media (max-width:700px) {
+        .navbar {
+            flex-direction: column;
+            text-align: center;
+        }
+        #main {
+            flex-direction: column;
+        }
+        #sidebar {
+            order: -1;
+        }
+    }
+</style>
+
+<body>
+
+    <div class="header">
+        <h1>Lorem İpsum</h1>
+        <p>Lorem, ipsum dolor.</p>
+    </div>
+
+    <div class="navbar">
+
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+        <a href="#">Link 4</a>
+
+    </div>
+
+    <div id="main">
+
+
+        <div id="sidebar">
+            <h2>Lorem ipsum</h2>
+            <div style="height: 200px;" class="text">
+
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, iure! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, blanditiis.</p>
+
+            <div style="height: 50px;" class="text piece"></div>
+            <div style="height: 50px;" class="text piece"></div>
+            <div style="height: 50px;" class="text piece"></div>
+
+
+        </div>
+
+        <div id="content">
+
+            <h2>Lorem ipsum</h2>
+
+            <div style="height: 200px;" class="text"> </div>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, iure! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, blanditiis.</p>
+            <h2 class="header-second">Lorem ipsum</h2>
+
+
+            <div style="height: 200px;" class="text"> </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, iure! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, blanditiis.</p>
+
+
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

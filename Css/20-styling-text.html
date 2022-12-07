@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Ranchers&display=swap" rel="stylesheet">
+
+    <title>Styling Text</title>
+    <!--
+        text-decoration:overline /* Metin Üstü Çizgi */
+
+        text-decoration:line-through /* Üzeri Çizili Metin */
+
+        text-decoration:underline /* Altı Çizili Metin */
+    -->
+
+    <style>
+        body{
+            font-family: 'Abel', sans-serif;
+            width: 700px;
+            margin: 30px auto;
+        }
+
+        p{
+            font-size: 22px;
+            line-height: 150%; /* satır arası yükseklik */
+            word-spacing: 3px;
+            text-indent: 20px; /* paragraf başlangıcı yaparız böylece boşluk. */
+            letter-spacing: 2px;
+        }
+
+        h2{
+            text-transform:uppercase;  /* hepsini büyük harf yapar. 
+            lowercase = küçük harf , capitalize = her kelimenin ilk harfi büyük.*/
+
+        }
+
+        .bold{
+            font-weight: bold;
+        }
+        .italic{
+            font-style: italic;
+        }
+        .link{
+            text-decoration: none;
+            color: hotpink;
+        }
+
+        .button{
+            border: 1px solid green;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 20px;
+            color: black;
+        }
+
+        .button:hover{
+            background-color: rgb(25, 207, 25);
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+        
+    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque odio
+        molestiae, <span class="italic bold">corporis quaerat pariatur at</span>  impedit iusto voluptatem unde 
+        <span class="bold"><a class="link" href="#">dignissimos officiis dicta,</a></span>  ad rem recusandae?
+    </p>
+
+    <a class="button" href="#">Link Button</a>
+
+
+</body>
+
+</html>

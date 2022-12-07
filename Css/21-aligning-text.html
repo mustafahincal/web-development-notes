@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Ranchers&display=swap" rel="stylesheet">
+
+    <title>Aligning Text</title>
+
+    <style>
+        body {
+            font-family: 'Abel', sans-serif;
+            width: 800px;
+            margin: 30px auto;
+        }
+
+        #first {
+            text-align: right;
+            /* metindeki satırlar sağ tarafa yaslanır.*/
+        }
+
+        #second {
+            text-align: center;
+            /* metindeki tüm satırlar ortalananır */
+
+            column-count: 3;
+            column-rule: 3px solid rgb(131, 240, 240);
+            /* column-count ile paragrafı kolonlara bölebiliyoruz. 
+               column-rule ile de böldüğümüz kolonlar arası çizgi getirebiliyoruz. */
+
+            border: 4px solid  rgb(131, 240, 240) ;
+            padding: 10px;
+        }
+
+        /* inline etiketlere text-align etki etmez . örneğin 3 a etiketini sağ tarafa
+        kaydırmak istesek a ya uyguladığımız text-align etki etmez. Ama a etiketlerini
+        bir div içine alıp div etiketine uygularsak olur. veya a etiketlerini block yaparsak. */
+
+        div {
+            text-align: center;
+        }
+        a{
+            display: block;
+            border: 3px solid rgb(20, 20, 20);
+            padding: 15px 20px;
+            color: black;
+            background-color: rgb(255, 255, 254);
+            text-decoration: none;
+            font-size: 30px;
+            width: 20%;
+            margin: 5px auto;
+        }
+        a:hover{
+            color: rgb(44, 73, 238);
+            background-color: rgb(247, 247, 47);
+        }
+
+        #forth{
+            text-align: justify;
+            /* justify yaparak satırların sonunda herhangi bir boşluk bırakmayız */
+            text-indent: 30px;
+            /* text-indent ile paragraf başı yapabilirz.*/
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+
+    <p id="first">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque odio
+        molestiae, corporis quaerat pariatur at impedit iusto voluptatem unde
+        dignissimos officiis dicta, ad rem recusandae?Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+        odio
+        molestiae, corporis quaerat pariatur at impedit iusto voluptatem unde
+        dignissimos officiis dicta, ad rem recusandae?
+    </p>
+    <p id="second">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque odio
+        molestiae, corporis quaerat pariatur at impedit iusto voluptatem unde
+        dignissimos officiis dicta, ad rem recusandae?Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+        odio
+        molestiae, corporis quaerat pariatur at impedit iusto voluptatem unde
+        dignissimos officiis dicta, ad rem recusandae?
+    </p>
+    <p id="third">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque odio
+        molestiae, corporis quaerat pariatur at impedit iusto voluptatem unde
+        dignissimos officiis dicta, ad rem recusandae?Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+        odio
+        molestiae, corporis quaerat pariatur at impedit iusto voluptatem unde
+        dignissimos officiis dicta, ad rem recusandae?
+    </p>
+    <p id="forth">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque odio
+        molestiae, corporis quaerat pariatur at impedit iusto voluptatem unde
+        dignissimos officiis dicta, ad rem recusandae?Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+        odio
+        molestiae, corporis quaerat pariatur at impedit iusto voluptatem unde
+        dignissimos officiis dicta, ad rem recusandae?
+    </p>
+
+    <div>
+        <a href="">Link1</a>
+
+        <a href="">Link2</a>
+
+        <a href="">Link3</a>
+    </div>
+
+</body>
+
+</html>

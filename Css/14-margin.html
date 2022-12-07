@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Margin</title>
+
+    <style>
+        body {
+            margin: 0;
+            /* body nin varsayılan özelliklerinde margin vardır. biz 0 yapabiliriz. */
+        }
+        /*   
+            sadece margin dememiz top right left bottom hepsi için uygular
+        eğer tek biri için yapmak istersek margin-top margin-bottom diye belirtmemiz
+        gerekir. 
+            block etiketlere top bottom right left margin hepsi uygulanabilir. 
+            inline etiketlere sadece right ve left margin uygulanabilir.
+            margin: auto; dersek direk ortalar(sağdan soldan eşit boşluk).
+        margin: 20px auto dersek 20px uygulayıp ortalar. 
+            margin: 20px 30px; dersek 20px top bottom - 30px right left şeklinde margin uygulanır.
+        */
+        
+        .box {
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+        
+        #first {
+            background: red;
+            margin-top: 50px;
+        }
+        
+        #second {
+            background: blue;
+            margin-top: 70px;
+        }
+        
+        #third {
+            background: green;
+            margin-top: 90px;
+        }
+        
+        span {
+            background-color: rgb(255, 224, 98);
+            margin: 10px;
+            /* inline etiketlere margin değeri sadece sağ ve soldan etki eder */
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="box" id="first">box 1</div>
+
+    <div class="box" id="second">box 2</div>
+
+    <div class="box" id="third">box 3</div>
+
+    <span>text1</span>
+    <span>text2</span>
+    <span>text3</span>
+
+
+
+</body>
+
+</html>

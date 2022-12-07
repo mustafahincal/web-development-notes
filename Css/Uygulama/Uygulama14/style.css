@@ -1,0 +1,194 @@
+#container {
+    width: 1140px;
+    /* ana cercevemize belli sabit bir genişlik verdik.*/
+    margin: 20px auto;
+    /* margin: auto; dersek direk ortalar(sağdan soldan eşit boşluk).
+       margin: 20px auto dersek 20px uygulayıp ortalar. */
+}
+
+body {
+    background-color: #f1f1f1;
+    font-family: 'Abel', sans-serif;
+    font-size: 12px;
+    color: #333;
+    line-height: 135%;
+}
+
+#blog-post-container {
+    width: 75%;
+    float: left;
+    /* ana cercevemiz içinde 2 tane div i yan yana getircez . Bu yüzden genişlikleri
+    75% ve 25% yapmalıyız. */
+}
+
+#other-posts {
+    width: 25%;
+    float: left;
+    padding: 10px;
+}
+
+#author-box {
+    /*  border: 3px solid gray; */
+}
+
+.box {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    /* cerceve kenarları yuvartıldı. */
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.blog-post {
+    position: relative;
+    padding: 0;
+}
+
+.date {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    color: rgb(122, 121, 121);
+    font-size: 13px;
+}
+
+.tags {
+    margin: 0;
+    padding: 0;
+    /* dersek ul etiketinin varsayılan özellklerin de olan margin ve padding değerlerini
+    0 layıp yan yana getirdiğimz liste elemanlarını en soldan başlatabiliriz.*/
+}
+
+.tags li {
+    list-style: none;
+    display: inline;
+    margin-right: 5px;
+    /* 
+    liste elemanlarını yan yana yazmak için;
+    float: left; 
+    yazıp daha sonra görüntüyü düzeltmek için ul etiketinden sonra 
+    <div style="clear: both"></div>
+    yazsak da olur.
+    */
+}
+
+.tags li a {
+    text-decoration: none;
+}
+
+.blog-post img {
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    transition: opacity 0.5s;
+}
+
+img:hover {
+    opacity: 0.8;
+    cursor: grab;
+    /* imleci değiştirdik */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* div lere padding uyguladığımız 75% 25% kuralına uymaz ve yan yana 
+    duramazlar . yan yana durmaları için border-box deriz genel boyutu değişmez.
+    sadece border ve padding değerleri için geçerli.  */
+}
+
+h2 {
+    font-size: 2.5em;
+    /* body deki değerin 2.5 katı */
+    margin-bottom: 15px;
+    padding-left: 10px;
+}
+
+p {
+    padding: 10px;
+}
+
+#author-box {
+    padding-top: 10px;
+}
+
+#author-box img {
+    border-radius: 50%;
+    float: left;
+    margin-bottom: 20px;
+}
+
+.author-text {
+    float: left;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+.blog-text {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: rgb(85, 76, 76);
+    line-height: 22px;
+}
+
+#share a {
+    color: grey;
+    text-decoration: none;
+    margin-right: 12px;
+    opacity: 0.6;
+    /* solukluk ayarı */
+}
+
+#share a:hover {
+    opacity: 1.2;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+.header {
+    margin-bottom: 10px;
+    border-bottom: 1px solid grey;
+    padding-bottom: 10px;
+}
+
+.tag {
+    background-color: rgb(253, 128, 106);
+    color: white;
+    margin-left: 10px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 15px;
+    transition: background-color 0.6s;
+}
+
+.tag:hover {
+    background-color: rgb(26, 25, 25);
+}
+
+.p20 {
+    padding: 20px;
+}
+
+.blog-title {
+    font-weight: 700;
+}
+
+.blog-title a {
+    color: #444;
+    text-decoration: none;
+    transition: all 0.3s;
+    /* all diyerek tüm özellikleri dahil ettik.*/
+}
+
+.blog-title a:hover {
+    color: lightcoral;
+}

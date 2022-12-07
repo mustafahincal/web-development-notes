@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cards</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        
+        #contaniner {
+            width: 30%;
+            height: 350px;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+            border-radius: 2px;
+            transition: opacity 0.5s, box-shadow 0.5s;
+            margin: 20px;
+        }
+        
+        #contaniner:hover {
+            opacity: 0.7;
+            box-shadow: 0px 2px 4px;
+        }
+        
+        img {
+            width: 100%;
+            /* böyle yaparsak için de bulunduğu div in tamamını kaplar.  */
+            height: 250px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        
+        #card-body {
+            padding: 10px 20px;
+        }
+        
+        .card-title {
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="contaniner">
+        <img src="img/1.jpeg" alt="img">
+        <div id="card-body">
+            <h4 class="card-title">Card Title</h4>
+            <p class="card-text">Card Body</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

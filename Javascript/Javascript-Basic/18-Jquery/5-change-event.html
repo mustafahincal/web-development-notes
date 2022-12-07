@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <title>Jquery</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+
+
+
+</head>
+
+<body>
+
+    <form>
+        <p>
+            <label for="ad">Ad : </label>
+            <input type="text" class="control" name="ad">
+
+        </p>
+
+        <p>
+            <label for="hobiler">Hobiler : </label>
+            <select class="control" name="hobiler">
+                <option value="spor" selected="selected">Sinema</option>
+                <option value="sinema">Spor</option>
+            </select>
+
+        </p>
+    </form>
+
+
+
+    <script>
+        // bu ifade genel olarak sayfanın hazır olduğunu , göstermek için olan bi şey asıl önemli tarafı iç kısmı.
+        $(document).ready(function() {
+            $(".control").change(function() {
+                console.log("change event calisti");
+                // select kutusunda bir değişiklik yaptığımız zaman çalışacak.
+                // input a bi şey yazdığımız zaman da çalışacak.
+                console.log($(this).val());
+                // class'ı control olan etiketlerden tıkladığımızın value'sini alıyoruz.
+            });
+        });
+    </script>
+
+</body>
+
+</html>

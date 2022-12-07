@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Padding</title>
+    <!-- margin dış kısım padding iç kısım gibi düşünebiliriz.-->
+
+    <style>
+
+        *{  /* böyle diyerek sayfadaki tüm etiketlerin margin değerlerini 0 ladık. */
+            margin: 0;
+        }
+        /*   
+            sadece padding dememiz top right left bottom hepsi için uygular
+        eğer tek biri için yapmak istersek padding-top padding-bottom diye belirtmemiz
+        gerekir. 
+            block etiketlere top bottom right left padding hepsi uygulanabilir. 
+            inline etiketlere de hepsi uygulanabilir ama görüntü bozulur alan artarsa
+        etrafındaki diğer şeylerin üstüne geçebilir. right ve left uygulanması yeterli.
+        */
+
+        /*  padding: 10px 20px;  
+        dersek 10px aşağı ve yukardan , 20px sağdan ve soldan padding uygular.   */
+
+        .box{
+            width: 500px;
+		}
+		#first{
+			background: rgb(252, 122, 122);
+            padding-left:  40px;
+            /* genişlik 500 dü soldan 40px padding uyguladık ve son genişlik 520px olur. */
+		}
+		#second{
+			background: rgb(117, 221, 117);	
+            padding-bottom: 50px;
+		}
+        
+        span{
+            background-color: rgb(192, 158, 158);
+            margin-right: 20px;
+        }
+
+        /* padding: 50px(top) 60px(right) 40px(bottom) 60px(left) Saat yönüne göre
+        yaparız eğer tek tek yazmak yerine tek padding de belirlemek istersek.*/
+
+	</style>
+
+</head>
+
+<body>	
+
+	<div class="box" id="first">Komple Uygulamalı Web Geliştirme</div>
+
+	<div class="box" id="second">AspNetCore Eğitimi</div>
+
+    <span>Komple Uygulamalı Web Geliştirme</span>
+
+    <span>AspNetCore Eğitimi</span>
+	
+</body>
+</html>

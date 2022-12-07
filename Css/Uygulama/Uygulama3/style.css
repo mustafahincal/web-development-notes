@@ -1,0 +1,171 @@
+/* <body> font-size 14px ve background #f2f2f2 */
+
+body {
+    font-size: 14px;
+    background-color: #f2f2f2;
+}
+
+
+/* h1 etiketine gray border ve padding 5px ekleyin  */
+
+h1 {
+    padding: 5px;
+    border: 2px grey solid;
+}
+
+
+/* h2 etiketlerinin yazı rengini kırmızı yapınız */
+
+h2 {
+    color: red;
+}
+
+
+/* h2 etiketlerinden sınıfı active olana yeşil border ekle */
+
+h2.active {
+    border: 2px green solid;
+}
+
+
+/* h2 den sonra araya boşluk koyarsak , h2 etiketinin altında ki class ı active olanları arar.
+boşluk koymassak h2 etiketlerinden class ı active olanları yapar. */
+
+
+/* paragraf id'sine sahip olan etikete font kalınlığı verin*/
+
+#paragraf {
+    font-size: 30px;
+}
+
+
+/* div içindeki h3 etiketlerine gold arkaplan ekle */
+
+div h3 {
+    background-color: gold;
+}
+
+
+/*h1 den sonra gelen aynı seviyedeki tüm p arkaplan red olsun  */
+
+h1~p {
+    background-color: red;
+}
+
+
+/*div içindeki tüm p etiketlerinin arka planını yeşil yapın  */
+
+div p {
+    background-color: green;
+}
+
+
+/*Tüm liste elemanlarına gray border ve margin-top:2px ekleyin.*/
+
+ul li {
+    border: grey solid 1px;
+    margin-top: 2px;
+    /* üst den 2px boşluk bırakmasını istiyoruz.*/
+}
+
+
+/* active sınıfına sahip tüm elemanlara gold arkaplan ekleyin..*/
+
+ul li.active {
+    background-color: gold;
+}
+
+
+/* liste elemanlarından ilkinin kelime aralığını arttır */
+
+ul li:first-child {
+    word-spacing: 10px;
+}
+
+
+/* liste elemanlarından en sondakinin harf aralığını arttır */
+
+ul li:last-child {
+    letter-spacing: 5px;
+}
+
+
+/* liste eleman index i tek olanların yazı rengini yeşil */
+
+ul li:nth-of-type(odd) {
+    color: green;
+    font-weight: bold;
+}
+
+
+/* liste eleman index i çift olanların yazı rengini turuncu */
+
+ul li:nth-of-type(even) {
+    color: orange;
+    font-weight: bold;
+}
+
+
+/*input nesnelerinden text ve password olanlara aşağıdaki css kodlarını uygulayın.
+
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+
+*/
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 20px;
+    /* ilk boyut yukardan aşağıdan ikinci boyut sağdan soldan etkiliyor. */
+    margin: 8px 0;
+    /* üstden ve altdan boşluk bırakıyor kutular arası mesafe değişiyor.*/
+    box-sizing: border-box;
+}
+
+
+/*input nesnelerinden type i submit olana aşağıdaki css kodlarını uygulayın.
+
+    width: 100%;
+    background-color: green;
+    color: white;
+    padding: 12px 18px;
+    margin: 7px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+*/
+
+input[type="submit"] {
+    width: 100%;
+    background-color: green;
+    color: white;
+    padding: 12px 18px;
+    margin: 7px 0;
+    border: none;
+    border-radius: 4px;
+    /* köşeleri yuvarlaştırmamızı sağlar */
+    cursor: pointer;
+    /* üzerine gelindiğinde fare imleci değişir. */
+}
+
+
+/*submit butonuna hover olayı gerçekleştirğinde arkaplan rengini #45a049 yapınız */
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+
+/*input kutularından type i submit olayanların focus olayı gerçekleştiğinde arkaplan renklerini lightgoldenrodyellow yapın. */
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    background-color: lightgoldenrodyellow;
+}
+
+
+/* kutuları tıkladığımız da yazılan yerin rengini değiştirme olayıdır focus. active olayı gibi işler. */

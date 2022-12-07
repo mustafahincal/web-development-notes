@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* 
+                eğer biz tüm div'lere değilde herhangi bir div i konumlandırmak istersek
+            bir class veya id belirleyip  align-self ile konunlandırabiliriz.
+
+                sıralamayı da order ile yapabiliriz. order ile vereceğimiz değerler
+            küçük hangisiyse o en başa gelir ve öyle olur.
+
+                flex-grow:; veya flex:; ile elemanların container içinde ki kapladıkları alanı 
+            belirleyebiliriz. 
+                Eğer hepsine flex-grow:1; dersek container'i ortak olarak
+            paylaşırlar genişlikleri aynı olur. Farklı olmasını istiyorsak farklı değerler
+            vermeliyiz ki ona göre orantılı paylaşsınlar.
+                Diğerlerine flex:; değeri vermeyip sadece birine verirsek diğerleri
+            varsayılan olarak 0 değeri alır . Flex değeri verdiğimiz eleman kalan boşluğu 
+            tamamen doldurur.
+
+
+        */
+        
+        .container {
+            background-color: rgb(212, 192, 192);
+            padding: 15px;
+            height: 500px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: stretch;
+        }
+        
+        .item {
+            background-color: rgb(250, 78, 78);
+            padding: 30px;
+            margin: 30px;
+            color: #fff;
+            font-size: 23px;
+            /* flex elemanlarının genişliklerini belirliyorum. 
+            flex-grow=0; verirsek ki varsayılan özelliktir, içerik kadar yer kaplar.
+            flex-grow=1; dersek tüm container'in genişliğini eşit olarak paylaşırlar. */
+            flex-grow: 0;
+        }
+        
+        .item-1 {
+            /* .item class'ına flex-grow=0; verip item-1'e 0 dan farklı bir verdiğim durumda ; diğer 3 elemandan kalan alanın tümünü kaplar. */
+            flex-grow: 2;
+        }
+        
+        .item-2 {
+            /* .item class'ına flex-grow=0; verip item-1'e 2 verip ardından item-2'ye 1 değerini verdiğim durumda; item-3 ve item-4 'ten kalan alanın tümünü 2 ye 1 oranla paylaşırlar*/
+            flex-grow: 1;
+        }
+        
+        .item-3 {
+            /* diyerek başta tüm elemanlara verdiğim align-items konumundan farklı olarak elemana ayrı bir konum verebiliyorum.*/
+            align-self: flex-end;
+        }
+        
+        .item-4 {}
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="item item-1 ">item 1</div>
+        <div class="item item-2">item 2</div>
+        <div class="item item-3">item 3</div>
+        <div class="item item-4">item 4</div>
+
+
+
+    </div>
+
+
+</body>
+
+</html>

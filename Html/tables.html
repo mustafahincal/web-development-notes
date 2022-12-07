@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablolar</title>
+
+</head>
+
+<body>
+
+    <table border="4" width="50%">
+
+        <!-- border ekleyerek tablomuza kenar ekleyebiliriz.-->
+        <!-- width(genislik) ekleyerek sayfanın ne kadarını kaplayacağını belirleriz.-->
+
+        <!-- th(Table Header) tablo başlığı -->
+        <!-- tr(Table Row) tablo satırı -->
+        <!-- td(Table Data) tablo kolonu. Kaç tane td eklersek o satırı o kadar hücreye
+        bölmüş oluruz. -->
+        <thead>
+            <tr>
+                <!-- 3 kolon olduğu için 3 başlık olacak-->
+
+                <th>Kurs Adı</th>
+                <!-- 1.td başlığı -->
+                <th>Saat</th>
+                <!-- 2.td başlığı -->
+                <th>Ders Adedi</th>
+                <!-- 3.td başlığı -->
+
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <!-- 1.satır -->
+
+                <td>Komple Web Geliştirme Eğitimi</td>
+                <td>40</td>
+                <td>300</td>
+
+            </tr>
+
+            <tr>
+                <!-- 2.satır -->
+
+                <td>Core 2 Mvc Eğitimi</td>
+                <td>30</td>
+                <td rowspan="2">200</td>
+                <!-- rowspan ile 2-3, satırı birleştirebiliriz.-->
+
+            </tr>
+
+            <tr>
+                <!-- 3.satır -->
+
+                <td colspan="2">Python Eğitimi</td>
+                <!-- colspan ile 2-3, kolonu birleştirebiliriz.-->
+
+            </tr>
+        </tbody>
+
+
+
+    </table>
+
+
+
+</body>
+
+
+</html>

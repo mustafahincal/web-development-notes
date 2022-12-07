@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Css Display</title>
+	<style>			
+		
+	/* Display : none | inline | block | inline-block */
+
+    /* 
+    display: none; yaparsak uyguladığımız etiket kaybolur. 
+    
+    display: inline; yaparsak block elementler inline gibi davranır. width ve height
+    değerleri veremeyiz.
+
+    display: block; yaparsak inline elementler block gibi davranır. 
+
+    display: inline-block; yaparsak element hem inline gibi yanyana gelir hem de block
+    gibi witdh ve height değerleri verebiliriz.
+    */
+		    
+	/* Browser Defaults;
+        Tarayıcının varsayılan özellikleri vardır. div için display varsayılan özelliği
+    block dur. Ama örneğin a ve span etiketleri inline dır. 
+        Inline etiketler sadece içeriği kadar yer kaplar. Width ve height değerleri
+    veremeyiz.
+        Block etiketler içinde olduğu satırı tamamen kaplar ve boyutlarını oynayabiliriz.
+        Eğer bir span etiketinin hem yan yana gelmesini sağlamak hem de boyutlarını
+    değiştirmeyi sağlamak istersek hem block hem de inline özellikleri olmasını
+    istersek;  display: inline-block; kullanırız.
+    */
+		
+	/* Override Defaults */
+    
+    div{
+        width: 200px;
+        height: 200px;
+        background-color: rgb(241, 164, 64);
+        margin: 10px;
+    }
+
+    span{
+        background-color: rgb(187, 181, 156);
+        display: inline-block;
+        height: 100px;
+        width: 100px;
+        margin: 5px;
+    }
+
+    
+		
+	</style>
+
+</head>
+
+<body>
+
+    <div id="first">first</div>
+    
+    <div id="second">second</div>
+       
+    <span>deneme 1</span>
+    <span>deneme 2</span>
+    <span>deneme 3</span>
+    <br>
+    <a href="">Home</a>
+    <a href="">Page</a>
+    <a href="">Reference</a>
+
+</body>
+
+</html>

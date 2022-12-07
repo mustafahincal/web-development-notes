@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Styling Lists</title>
+
+    <style>
+
+        ul{
+            background-color: rgb(255, 109, 109);
+            font-weight: bold;
+            padding: 25px;
+        }
+        ul li{  /* sadece li dersek ol etiketinin altındaki li lere de uygular */
+            background-color: rgb(255, 209, 168);
+            padding: 7px;
+            margin-top: 5px; /* li ler arası mesafe artar. */
+            list-style-type: none;
+            border: 2px double rgb(0, 0, 0);
+        }
+
+        ol{
+            background-color: #f1f1f1;
+            padding: 10px 40px;
+            border-left: 6px solid black;
+            list-style-type: upper-roman;
+        }
+
+
+    </style>
+
+
+</head>
+
+<body>
+
+    <ol>
+        <li>Web developer eğitimi</li>
+        <li>Asp.net Eğitimi</li>
+        <li>Python Eğitimi</li>
+    </ol>
+
+    <ul>
+        <li>Web developer eğitimi</li>
+        <li>Asp.net Eğitimi</li>
+        <li>Python Eğitimi</li>
+    </ul>
+
+    
+</body>
+
+</html>

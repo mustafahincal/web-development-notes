@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            display: flex;
+            background-color: rgb(212, 192, 192);
+            height: 500px;
+            align-items: flex-start;
+            /* 
+            align-items: center;
+            justify-content: center;
+            */
+        }
+        /*  
+                bir div'i sayfanın ortasına getirmek için
+            align-items: center;
+            justify-content: center;
+            demek yeterli flex öğrenmeden önce bunu yapmak uğraştırıcıydı.
+    
+        */
+        /*
+            display:flex; yaptıkdan sonra margin i cok güzel kullanabiliyoruz.
+                bir div'i sayfasının ortasını getirmek için margin de kullanılabilir. 
+            yüksekliği ve genişliği olan bir container için de margin:auto; dersek 4 bir yandan
+            ortalanır ve sayfanın ortasına gelir.
+                sağa yaslamak isterse margin-left:auto; dememiz
+            yeterli. 
+                aşağı ve ortaya yerleştirmek istersek  
+                margin-left:auto;
+                margin-right:auto;
+                margin-top:auto dememiz yeterli.
+        */
+        
+        .item {
+            background-color: rgb(250, 78, 78);
+            padding: 30px;
+            color: #fff;
+            font-size: 23px;
+            /*tam ortalar*/
+        }
+        
+        .item-1 {
+            margin-right: auto;
+        }
+        
+        .item-2 {
+            margin-left: auto;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="item item-1">item 1</div>
+        <div class="item item-2">item 2</div>
+
+
+
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <title>Jquery</title>
+
+    <!--
+        kütüphaneyi
+        sayfamıza böyle ekliyoruz.
+     -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+<body>
+
+    <h3>JQuery Dersleri</h3>
+    <a href="#">Link1</a>
+    <ul id="liste">
+        <li class="item">JQuery Reference</li>
+        <li>Selectors <a href="#">Link2</a> </li>
+        <li class="item">JQuery Plugins</li>
+    </ul>
+
+    <ul>
+        <li class="item">JQuery Reference</li>
+        <li>Selectors <a href="#">Link2</a> </li>
+        <li class="item">JQuery Plugins</li>
+    </ul>
+
+    <script>
+        console.log($("#liste"));
+
+        console.log($("h3"));
+
+        console.log($("ul"));
+
+        console.log($("li"));
+
+        console.log($(".item"));
+
+        console.log($("a"));
+        // tüm a etiketlerini alıyoruz.
+
+        console.log($("ul li a"));
+        // ul nin altında li'nin altındaki a etiketini alıyoruz.
+
+        console.log($("#liste li a"));
+        // id'si liste olan ul'nin altındaki li'nin altındaki a yı alıyoruz.
+    </script>
+
+
+</body>
+
+</html>

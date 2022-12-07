@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <title>Jquery</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+        
+        .green {
+            background-color: rgb(100, 207, 100);
+        }
+        
+        .pink {
+            background-color: pink;
+        }
+        
+        .display {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+
+
+        <h1>JQuery Helper Methods</h1>
+        <ul>
+            <li>JQuery Selectors</li>
+            <li>Jquery Methods</li>
+            <li>JQuery Animations</li>
+        </ul>
+    </div>
+
+    <input id="deneme" type="text" placeholder="Fullname" value="Jquery Val Fonksiyonu">
+    <br><br>
+    <input id="ad" type="text" placeholder="Adınız">
+    <input id="soyad" placeholder="Soyadınız" class="green" type="text">
+    <input id="yas" placeholder="Yasınız" type="number">
+    <input id="button" type="button" value="Kaydet">
+
+
+
+    <script>
+        $("#button").click(function() {
+            var ad = $("#ad").val();
+            var soyad = $("#soyad").val();
+
+            console.log("ad soyad : " + ad + " " + soyad);
+
+            $("h1").addClass("highlight");
+            $("#soyad").toggleClass("green");
+        })
+    </script>
+
+</body>
+
+
+
+
+
+</html>

@@ -1,0 +1,83 @@
+/* Pseudo Element 
+yazarken çift :: (çift nokta) kullanuyoruz.*/
+
+p::first-line{
+    color: green;
+    word-spacing: 2px;    /* Kelimeler arası mesafe */
+    letter-spacing: 2px;  /* Harfler arası mesafe */
+    font-weight: bold;
+}
+/* p::first-line dersek paragrafın ilk satırı nı seçmiş oluruz.*/
+
+p.about::first-line{
+    color: red;
+}
+
+p::first-letter{
+    font-size: 30px;
+}
+
+p:hover::after{   /* böyle yaparsak p etiketi üstüne geldiğimiz zaman -deneme yi yazar. */
+    content:"-deneme";
+    display: block;
+    background-color: yellow;
+}
+
+
+/* Pseudo Class 
+yazarken tek : (çift nokta) kullanıyoruz. */ 
+
+
+ul li:first-child{
+    background-color: grey;
+}
+
+ul li{
+    padding: 10px;
+    margin-bottom: 20px;
+    list-style: square;
+}
+
+ul li:nth-of-type(even){      /* even : çift */
+    border: 3px red solid;
+}
+
+ul li:nth-of-type(odd){      /* odd : tek */
+    border: 3px blue solid;
+}
+
+a{
+    padding: 5px 8px;
+    display: block;
+    width: 80px;   /* sadece blok elementlere uygulanabilir . ve yukarda block yaptık. */
+    text-decoration: none;  /* normalde linklerin altı çizili böylece kaldırdık. */
+    margin-bottom: 10px;
+    border: 1px solid red;
+}
+
+a:link{
+    color: red;
+}
+a:visited{    /* link e daha önce tıklandıysa link rengi gri olacaktır böylece. */
+    color: grey;
+}
+a:hover{     /* hover ; üstüne fare imleci getirdiğimiz anda cıkan renkdir.. */
+    color: black;
+    background: yellow;
+}
+a:active{    /* active ; üstüne tıkladığımız anda oluşan renkdir. */
+    color: green;
+    background: blue;
+}
+
+span{
+    display: none;
+    background-color: red;
+    padding: 10px;
+}
+ 
+div:hover span{      
+    display: block;
+}
+/* burda div etiketi üzerine geldiğinde displayi none olan span i block yaparak görünür
+kılıyor. hover değilde active yapsaydık div etiketi üzerine tıklandığında block olacaktı. */

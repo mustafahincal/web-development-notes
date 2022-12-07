@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /*		
+			** Tüm kutulara 200px genişlik ve yükseklik veriniz.
+		    ** Tüm kutulara border veriniz.
+			** Box #1 : kırmızı , Box #2 : blue , Box #1 : turuncu arkaplan renklerini veriniz.
+		    ** Tüm kutuları yan yana getirin. 
+			** Sayfa başlığının yüksekliğini 150px ve arkaplan rengini ise mavi yapınız.
+		*/
+        
+        .boxes {
+            width: 200px;
+            height: 200px;
+            border: green 2px solid;
+            display: inline-block;
+            /* div bir block elementi olduğunu için satırı tüm kaplar. bunu span gibi a
+            elementi gibi inline yapmak istersek display: inline; kullanırız. Ama bu sefer
+            de genişik ve yükseklikleri ayarlayamayız o yüzden burda 
+            display : inline-block ; kullanıyoruz.*/
+        }
+        
+        #box1 {
+            background-color: red;
+        }
+        
+        #box2 {
+            background-color: blue;
+        }
+        
+        #box3 {
+            background-color: orange;
+        }
+        
+        #header {
+            height: 150px;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="header">
+        Game Header
+    </div>
+
+    <div id="box1" class="boxes">
+        <!-- class içine aralarında boşluk koyarak birden fazla özellik ekleyebiliriz.-->
+        Box #1
+    </div>
+
+    <div id="box2" class="boxes">
+        Box #2
+    </div>
+
+    <div id="box3" class="boxes">
+        Box #3
+    </div>
+
+</body>
+
+</html>

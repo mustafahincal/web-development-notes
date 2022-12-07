@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Cards</title>
+
+</head>
+
+<body class="w-75 mx-auto my-4">
+
+    <!-- card class'ını verdiğimz zaman bir card oluşturur border'ı olan.-->
+
+    <div class="card">
+        <div class="card-body">
+            Lorem ipsum dolor sit amet.
+        </div>
+    </div>
+
+    <div class="card bg-primary text-white m-3">
+        <div class="card-body">
+            Lorem ipsum dolor sit amet.
+        </div>
+    </div>
+
+    <div class="card bg-warning text-white m-3">
+        <div class="card-body">
+            Lorem ipsum dolor sit amet.
+        </div>
+    </div>
+
+    <div class="card m-3 w-50">
+        <div class="card-body">
+            <h5 class="card-title">
+                Lorem ipsum dolor sit amet
+            </h5>
+            <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium atque odit necessitatibus dolorum saepe dolore numquam quibusdam consectetur voluptate soluta.
+            </p>
+            <button class="btn btn-danger">Button</button>
+        </div>
+    </div>
+
+    <!-- card-header ve card-footer diye class vererek toplam da 3 bölüme ayırmış olduk card'ımızı -->
+
+    <div class="card m-3">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+            Lorem ipsum dolor sit amet.
+        </div>
+        <div class="card-footer">
+            Footer
+        </div>
+    </div>
+
+    <div class="card mt-5">
+        <div class="card-header">Header</div>
+
+        <ul class="list-group list-group-flush ">
+
+            <li class="list-group-item">Lorem, ipsum dolor.</li>
+            <li class="list-group-item">Lorem, ipsum dolor.</li>
+            <li class="list-group-item">Lorem, ipsum dolor.</li>
+
+        </ul>
+
+    </div>
+
+    <br><br>
+
+
+    <div class="card m-3 w-50">
+        <div class="card-header">Featured</div>
+        <div class="card-body">
+            <h5 class="card-title">
+                Lorem ipsum dolor sit amet
+            </h5>
+            <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium atque odit necessitatibus dolorum saepe dolore numquam quibusdam consectetur voluptate soluta.
+            </p>
+            <button class="btn btn-danger">Button</button>
+        </div>
+
+        <div class="card-footer">
+            2 days ago.
+        </div>
+    </div>
+
+    <div class="card m-3 w-50 text-center">
+        <div class="card-header">Featured</div>
+        <div class="card-body">
+            <h5 class="card-title">
+                Lorem ipsum dolor sit amet
+            </h5>
+            <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium atque odit necessitatibus dolorum saepe dolore numquam quibusdam consectetur voluptate soluta.
+            </p>
+            <button class="btn btn-danger">Button</button>
+        </div>
+
+        <div class="card-footer">
+            2 days ago.
+        </div>
+    </div>
+
+    <br><br>
+
+    <div class="card m-3 w-25">
+        <img src="img/author.jpg" alt="" class="card-img-top">
+        <!-- overlay ile text'lerin resmin üzerine geçmesini sağladık.-->
+        <div class="card-img-overlay text-white font-weight-bold">
+            <h4 class="card-title">Tuğba Arıyan</h4>
+            <p class="card-text">Yazılım Mühendisi</p>
+            <a href="" class="card-link">See Profil</a>
+        </div>
+    </div>
+
+    <br><br>
+
+    <!--  card-columns ile içinde bulunan div'leri düzenli bir şekilde hizalar. -->
+    <div class="card-columns m-3">
+
+        <div class="card bg-primary text-white">
+            <div class="card-body">
+                Lorem ipsum dolor sit amet.
+            </div>
+        </div>
+
+        <div class="card bg-danger text-white">
+            <div class="card-body">
+                Lorem ipsum dolor sit amet.
+            </div>
+        </div>
+
+        <div class="card bg-success text-white">
+            <div class="card-body">
+                Lorem ipsum dolor sit amet.
+            </div>
+        </div>
+        <div class="card bg-info text-white">
+            <div class="card-body">
+                Lorem ipsum dolor sit amet.
+            </div>
+        </div>
+
+        <div class="card bg-warning text-white">
+            <div class="card-body">
+                Lorem ipsum dolor sit amet.
+            </div>
+        </div>
+
+        <div class="card bg-secondary text-white">
+            <div class="card-body">
+                Lorem ipsum dolor sit amet.
+            </div>
+        </div>
+
+    </div>
+
+    <br><br>
+
+    <!-- card-dect ile içinde bulunan div'leri aynı satırda dizebiliriz -->
+    <div class="card-deck">
+
+        <div class="card bg-warning text-white">
+            <div class="card-body">
+                <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+
+        <div class="card bg-warning text-white">
+            <div class="card-body">
+                <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+        <div class="card bg-warning text-white">
+            <div class="card-body">
+                <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+        <div class="card bg-warning text-white">
+            <div class="card-body">
+                <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+        <div class="card bg-warning text-white">
+            <div class="card-body">
+                <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <br><br>
+
+    <!-- card-group'un card-deck'den farkı içindeki div'lerin bitişik olması arada sadece bir ayrac ile ayrılmaları.-->
+    <div class="card-group mt-4">
+
+        <div class="card bg-warning text-white">
+            <div class="card-body">
+                <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+
+        <div class="card bg-warning text-white">
+            <div class="card-body">
+                <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+        <div class="card bg-warning text-white">
+            <div class="card-body">
+                <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+        <div class="card bg-warning text-white">
+            <div class="card-body">
+                <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script src=" https://code.jquery.com/jquery-3.3.1.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js " integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy " crossorigin="anonymous "></script>
+</body>
+
+</html>

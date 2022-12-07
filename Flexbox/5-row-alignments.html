@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            background-color: rgb(212, 192, 192);
+            padding: 15px;
+            height: 1000px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-content: space-evenly;
+        }
+        /* 
+            align-items:; ile farkı space-between ...  i satırlara uygulayabilmesi.
+            ve center özelliğinde ufak farklılık var
+
+            align-content:flex-start;           dediğimiz zaman yukarıdan sağa doğru sıralanmaya başlar . 
+            align-content:flex-end;             içerikler en aşağı kısma dayanır.
+            align-content: stretch;             varsayılan özelliği olarak container'in yüksekliğini kaplar. 
+            align-content: center;              y eksenine göre ortalar sağa doğru sıralar.
+            align-content: space-between;       dersek bir den fazla satır oluştuğu zaman container'in yükseliği satırlar arasına mesafe olarak paylaşılır.
+            align-content: space-around;        başlardan 1x div'ler arası 2x boşluk olacak şekilde hizalanır.
+            align-content: space-evenly;        başlarda ve div'ler arasında da aynı yükseklikte boşluk olur.
+
+            margin gibi;
+            gap:30px;
+            row-gap;30px;
+            column-gap:30px;
+        */
+        
+        .item {
+            background-color: rgb(250, 78, 78);
+            padding: 30px;
+            margin: 30px;
+            color: #fff;
+            font-size: 23px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="item">item 1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3</div>
+        <div class="item">item 4</div>
+        <div class="item">item 5</div>
+        <div class="item">item 6</div>
+        <div class="item">item 7</div>
+        <div class="item i8">item 8</div>
+        <div class="item">item 9</div>
+
+
+
+    </div>
+
+
+</body>
+
+</html>

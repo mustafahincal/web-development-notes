@@ -1,0 +1,97 @@
+body{
+    padding: 100px;
+}
+
+.border{
+    border: 1px solid rgba(0, 0, 0,0.125);
+    padding: 10px;
+    margin-right: 35px;
+}
+
+.tooltip{
+    position: relative;
+}
+
+.tooltip .text{
+    display: none; /* böyle yapınca text görünmez. hover ile getirtmek istiyoruz.*/
+    width: 120px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0px ;
+    z-index: 1; /* derinliğini artırırz . arkasına bir text gelirse iç içe geçemezler*/
+
+    position: absolute;
+}
+.tooltip:hover .text{
+    display: inline-block;
+}
+
+.top{
+    bottom: 120%;
+    left: 50%;
+    margin-left: -60px;
+}
+.top::after{ 
+/* burda küçük bir ok oluşturmak istiyoruz bunu içi boş bir kutunun 
+(border) kenarların 3 nü tranparent(görünmez) yapıyoruz en son bıraktığımız
+kısım okun nereye doğru olacağını gösteren kenar olcak. */
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+    /* top(üst) kısmı black gerileri görünmez. ok aşağı tarafı gösterecek , 
+    sağ tarafı göstermesini istersen left(sol) tarafı black yapıp diğerleri görünmez. */
+    margin-left: -5px;
+}
+
+.right{
+    left: 105%;
+    top: 2.5px;
+}
+.right::after{ 
+    content: "";
+    position: absolute;
+    right: 100%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+    margin-top: 5px;
+}
+
+.bottom{
+    top: 120%;
+    left: 50%;
+    margin-left: -60px;
+}
+.bottom::after{ 
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+    margin-left: -5px;
+}
+
+
+.left{
+    right: 105%;
+    top: 2.5px;
+}
+.left::after{ 
+    content: "";
+    position: absolute;
+    left: 100%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent black;
+    margin-top: 5px;
+}
+
+

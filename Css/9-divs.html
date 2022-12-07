@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Divs</title>
+
+    <style>
+
+        /*
+        p {
+            color: blue;
+        }
+        */
+
+        #section-one{
+            color: blue;
+            background-color:yellowgreen;  /* div tarayıcının genişliğini tamamen kaplar */
+            width: 200px;   /* genişliğini yüzdelik olarak veya direk px olarak ayarlayabiliriz. */
+
+            height: 100px; 
+            /* yüksekliği kendimiz belirlemezsek otomatik satır sayısına göre azalıp 
+            artar ama biz belirlersek ve satırlar fazla olursa taşar ve görüntü bozulur.
+            Bunu overflow ekleyerek daha da güzelleştirebiliriz.*/
+            overflow: scroll ; 
+            /* hidden yaparsak sarkan kısmı göstermez. scroll yaparsak
+            sağda aşağı yukarı kaydırıp içeriği görebileceğim scroll cıkar. 
+            Ama en iyisi auto yapmak eğer taşarsa scroll koyar taşmazsa sağda scroll
+            şeyi de cıkmaz görüntü daha iyi olur.*/
+        }
+        #section-two{
+            color: red;
+            background-color: turquoise;
+            width: 50%;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Komple Uygulamalı Web Geliştirme</h1>
+
+    <div id="section-one">
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+
+    </div>
+    <div id="section-two">
+
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+
+    </div>
+
+
+
+</body>
+
+</html>

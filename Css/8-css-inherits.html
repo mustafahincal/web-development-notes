@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Css Inherit</title>
+
+    <style>
+        /* a etiketi bir üstünden yani li ul ve body den bir özellik almaz buna
+        css inherit denir. */
+        
+        body {
+            color: orange;
+            /* içindeki tüm şeyler orange olur link kısmı hariç. */
+            font-size: 20px;
+            /* orantılı olarak ayarlar */
+        }
+        
+        ul {
+            color: red;
+        }
+        
+        li {
+            color: green;
+        }
+        
+        .red {
+            color: red;
+        }
+        /* id class a göre daha baskındır,özeldir. */
+        
+        #liste1 {
+            color: violet;
+        }
+        
+        a {
+            color: inherit;
+            /* color:inherit dersek kendinden üsteki etikete ne uygulandıysa onu alır. */
+            font-size: 25px;
+        }
+        
+        span {
+            border: 2px solid green;
+            color: red;
+        }
+        
+        #inherit span {
+            color: inherit;
+        }
+        /*   normalde yukarda span etiketi için css uyguladığımız daha özel olduğu için
+        üstündeki div in rengi değiştirilmesi spana daha etki etmez.  
+            ama burda bir div etiketi içinde id belirleyip daha sonra burda o id li div
+        etiketinin içindeki span deyip color inherit dersek üstündeki div in rengini alır.
+            eğer div de herhangi bir renk yoksa ozaman body deki rengi alır. */
+    </style>
+
+
+</head>
+
+<body>
+
+
+    <h1>Komple Uygulamalı Web Geliştirme</h1>,
+
+
+    <ul>
+        <li id="liste1" class="red">Html5</li>
+        <li>Css</li>
+        <li>Javascript</li>
+        <li>
+            <a href="#">Jquery</a>
+        </li>
+    </ul>
+
+
+    <div id="inherit" style="color: lightcoral;">
+        Lorem ipsum <span>dolor sit amet,</span> consectetur adipisicing.
+    </div>
+
+    <div style="color: lightseagreen;">
+        Lorem ipsum <span>dolor sit amet,</span> consectetur adipisicing.
+    </div>
+
+    <div>
+        Lorem ipsum <span>dolor sit amet,</span> consectetur adipisicing.
+    </div>
+
+
+
+</body>
+
+</html>

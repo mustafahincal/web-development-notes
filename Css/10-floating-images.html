@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Floating Images</title>
+
+    <style>
+
+        p {
+            border: 1px solid grey;
+            padding: 5px;
+        }
+
+        img {
+            width: 200px;
+
+            margin-right: 10px;
+            /* resimle yandaki içeriğin arasına 10px lik boşluk koyar. */
+
+            float: left;
+            /* devamındaki yazı direk bittiği yerden başlıyorken böyle yaparsak
+            yazı , resimle aynı hizadan başlar.
+                Burda sayfa da resmi biz oynadığımız için bazı aksaklıklar olabilir. 
+            örneğin yukarıda p ye verdiğimiz border sadece yazıya odaklanır. Az yazı
+            varsa border resmin içine geçer ve kötü görüntü olur. Bunu öğrendiğimiz
+            overflow ile düzeltebiliriz. */    
+        }
+
+        .clear{
+            overflow:auto;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia harum illo
+        repellendus saepe dolores! Id neque nostrum voluptatem totam nobis soluta
+        exercitationem aliquam velit nisi saepe minus nesciunt, consequuntur illo.
+    </p>
+
+    <p class="clear">
+        <img src="img/rowing.jpg" alt="rowing">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia harum illo
+        repellendus saepe dolores! Id neque nostrum
+    </p>
+
+
+
+</body>
+
+
+</html>

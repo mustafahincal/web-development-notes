@@ -1,0 +1,21 @@
+h1{
+    color: red;
+    text-align: center;
+
+
+}
+
+a{
+    color: blue;
+    text-decoration: none;
+}
+
+li{
+    display: inline;
+}
+
+/* böyle bir css sayfası oluşturduk bunu 1 den fazla
+html sayfasına etki ettirebiliriz. */
+
+/* sayfalarda yukardakiler yerine birşey yazarsak onlar
+daha etkin olur bunlar arka planda kalır. */

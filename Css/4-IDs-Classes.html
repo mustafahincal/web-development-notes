@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>IDs & Classes</title>
+
+    <style>
+        p{
+            font-size: 20px  !important;  
+            /* eğer bu etiketin hakim olmasını istersek !important diyerek etkin yapabiliriz. 
+            aşağıda inline olarak veya yeni selector tanımlayarak yaptığımız işlemler bunun üstüne gecemez.*/
+
+        }
+
+        /* Kendimiz ayrı bir selector oluşturup daha sonra bunları etki ettirmek 
+        istediğimiz etiketin içine class olarak ekliyoruz.*/
+
+        .f22{
+            font-size: 22px;
+        }
+
+        .f30{
+            font-size: 30px;
+        }
+
+        .red{
+            color: red;
+        }
+
+        .blue{
+            color: blue !important;
+        }
+
+        h1{
+            color: green;
+        }
+
+        /* etiketlerimize bir de id yoluyla ulaşabiliriz.*/
+
+        #header{
+            color: hotpink;
+            font-size: 45px;
+        }
+
+        #paragraf{
+            border: 2px red solid;
+
+        }
+        
+        /* id ve class ın farkları id de tek bir etikete uygulayabiliyoruz ama class da
+        istediğimiz kadar etikete uygulayabiliriz.*/
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1 id="header" class="red">  
+        Udemy Kurslarımıza Hoşgeldiniz.
+    </h1>
+    <!-- yukarda green yaptık burda class ile sonra dan oluşturduğumuz red selectorunu
+    ekledik. class ile daha özel yaptığımız için kırmızı olacak son renk ama yukarda
+    !important dersek h1 etiketine sonradan eklediğimiz kırmızı kalkar. Ve daha sonra 
+    id ile yaptığımız css kodu daha da etkin olur ve renk pembe olur.-->
+
+    <p id="paragraf" class="blue f22">Komple Uygulamalı Web Geliştirme</p>
+    <!-- id özeldir . paragrafı başka bir yerde id olarak tanımlamayız.-->
+
+    <p class="f30">Komple Uygulamalı Web Geliştirme</p>
+
+    <p class="red">Komple Uygulamalı Web Geliştirme</p>
+    
+    <p>Komple Uygulamalı Web Geliştirme</p>
+
+    
+</body>
+
+
+</html>

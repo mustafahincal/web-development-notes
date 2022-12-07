@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <title>Jquery</title>
+
+    <!--
+        kütüphaneyi
+        sayfamıza böyle ekliyoruz.
+     -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+<body>
+
+    <h3 id="header">JQuery Dersleri</h3>
+    <a href="#">Link1</a>
+    <ul id="liste">
+        <li class="item">JQuery Reference</li>
+        <li>Selectors <a href="#">Link2</a> </li>
+        <li>JQuery Plugins</li>
+    </ul>
+
+
+    <script>
+        // javascript ile;
+        document.getElementById("header").style.color = "blue";
+
+
+        var listeler = document.querySelectorAll("li");
+        listeler.forEach(function(item) {
+            item.style.color = "red";
+            item.style.fontSize = "20px";
+            item.style.border = "1px solid green";
+        });
+
+        // jquery ile;
+        $("#header").css("color", "red");
+        $("#liste a").css("text-decoration", "none");
+        $("a").css("text-decoration", "none");
+
+        let styles = {
+            color: "blue",
+            backgroundColor: "yellow",
+            fontWeight: "bold",
+        }
+
+        $("li").css(styles);
+
+        $("li.item").css("color", "pink");
+    </script>
+
+
+</body>
+
+</html>

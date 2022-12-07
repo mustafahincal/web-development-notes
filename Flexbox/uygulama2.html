@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox - Media Object</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    .media {
+        max-width: 500px;
+        background-color: #FAEBD7;
+        display: flex;
+        align-items: flex-start;
+        margin: 20px;
+        padding: 15px;
+        border-radius: 3px;
+    }
+    
+    .media-body {
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+    }
+    
+    .media-body h3 {
+        margin-bottom: 20px;
+    }
+    
+    .media-object {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .img-right {
+        order: 2;
+    }
+    
+    .media-inner {
+        margin-left: 0;
+        margin-right: 0;
+    }
+</style>
+
+<body>
+
+    <div class="media">
+        <img src="avatar.png" alt="" class="media-object">
+        <div class="media-body">
+            <h3 class="media-heading">Lorem İpsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae quae officiis commodi quo eligendi placeat, iure provident fuga quia iste.</p>
+        </div>
+    </div>
+
+    <div class="media">
+        <img src="avatar.png" alt="" class="media-object img-right">
+        <div class="media-body">
+            <h3>Lorem İpsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae quae officiis commodi quo eligendi placeat, iure provident fuga quia iste.</p>
+        </div>
+    </div>
+
+    <div class="media">
+        <img src="avatar.png" alt="" class="media-object">
+        <div class="media-body">
+            <h3>Lorem İpsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae quae officiis commodi quo eligendi placeat, iure provident fuga quia iste.</p>
+            <div class="media media-inner">
+                <img src="avatar.png" alt="" class="media-object">
+                <div class="media-body">
+                    <h3>Lorem İpsum</h3>
+                    <p> Iure provident fuga quia iste.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>

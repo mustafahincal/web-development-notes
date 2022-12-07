@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Supermercado+One&display=swap" rel="stylesheet">
+
+    <style>
+        h1 {
+            font-family: 'Supermercado One', cursive;
+            text-align: center;
+            font-size: 3rem;
+        }
+        
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .gallery div {
+            flex-grow: 1;
+            margin: 3px;
+            overflow: hidden;
+        }
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.3s ease-in;
+        }
+        
+        img:hover {
+            transform: scale(1.01);
+            /* scale yapınca bi taşma olur , onu göstermek istemezsek .gallery div' e overflow:hidden
+            veririz. */
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Image Gallery</h1>
+
+    <div class="gallery">
+        <div>
+            <img src="https://picsum.photos/400/300?random=1">
+        </div>
+        <div>
+            <img src="https://picsum.photos/300/300?random=2">
+        </div>
+        <div>
+            <img src="https://picsum.photos/200/400?random=3">
+        </div>
+        <div>
+            <img src="https://picsum.photos/600/300?random=4">
+        </div>
+        <div>
+            <img src="https://picsum.photos/300/600?random=5">
+        </div>
+        <div>
+            <img src="https://picsum.photos/300/300?random=6">
+        </div>
+        <div>
+            <img src="https://picsum.photos/300/300?random=7">
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

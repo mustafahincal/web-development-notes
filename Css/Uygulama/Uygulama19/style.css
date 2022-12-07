@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 7px;
+    /* en son responsive tasarım yaparken sadece bunu
+    değiştirmemiz yeterli olacak çünkü px yerine rem kullandık
+    rem bu 10px ile orantılı.*/
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    /* 1.6rem diyerek html in 10px olan font-size nı
+    body de 16px yaptık. */
+    line-height: 1.5;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: aquamarine;
+}
+
+p {
+    padding: 1.6rem 0;
+    /* html 10px ise mesela 1.6rem burada 16px e karşılık geliyor.*/
+    font-size: 2rem;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+/* Header */
+
+header {
+    height: 45rem;
+}
+
+header .bg-image {
+    background-image: url(img/bg.jpeg);
+    height: 45rem;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+    /* 
+    yazıları background-image nin üstüne getirmek istiyoruz
+    bunu yazıların position unu oynarak da yapabiliriz veya
+    bg-image div ini absolute yaparak normal akış dışına
+    cıkartmış oluruz ve ondan sonra gelen p etiketi 
+    bg-image nin üstüne gelmiş olur.
+
+    .content{
+    position: absolute;
+    top: 7%;
+    left: 20px;
+    */
+    position: absolute;
+    /* böyle yaptıkdan sonra bg-image ye uyguladığımız
+    opacity yüzünden yazılar da öyle gözükür. z-index i 
+    kullanarak bg-image yi yazının arkasına göndeririz */
+    z-index: -1;
+}
+
+header h1 {
+    padding: 11rem;
+    padding-bottom: 0;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #666;
+    padding: 1.2rem 1.5rem;
+    margin: .3rem 0;
+    transition: all 0.5s;
+    border-radius: 3px;
+}
+
+.btn:hover {
+    background-color: #eaeaea;
+    color: #333;
+}
+
+
+/* section-a */
+
+#section-a {
+    background-color: #eaeaea;
+    color: #333;
+    padding: 3.2rem 0;
+}
+
+
+/* section-b */
+
+div img {
+    width: 100%;
+    /* böylece sayfa küçültüp büyütmemize karşın resim
+    her zaman ekranı kaplıyor aşağıda scrool bar cıkmıyor. */
+    object-fit: cover;
+}
+
+#section-b {
+    padding: 2rem;
+}
+
+#section-b ul {
+    list-style: none;
+}
+
+.col-content {
+    padding: 1.5rem;
+}
+
+#section-b li {
+    background-color: #fff;
+    color: #333;
+}
+
+
+/* section-c */
+
+#section-c {
+    background-color: #eaeaea;
+    color: #333;
+    padding: 5rem;
+}
+
+
+/* section-d */
+
+#section-d .box:first-child {
+    background-color: #2690d4;
+}
+
+#section-d .box {
+    padding: 3rem;
+}
+
+
+/* footer */
+
+footer {
+    padding: 4rem;
+    background-color: black;
+}
+
+
+/* Responsive Tasarım */
+
+@media screen and (min-width:800px) {
+    html {
+        font-size: 9;
+    }
+}
+
+@media screen and (min-width:1100px) {
+    /* mobilden masaüstüne geçerken 700px le kadar
+sabit kal , 700px den sonra responsive uygula diyoruz.*/
+    #section-b li {
+        width: 28%;
+        margin: 1%;
+        display: inline-block;
+    }
+    .box {
+        width: 50%;
+        float: left;
+    }
+    html {
+        font-size: 11px;
+        /* sayfadaki her şey rem ile yaptığımız için yazıların
+        font-size olsun yükseklikleri olsun hepsini sadece
+        html in font-size nı değiştirerek orantılı bir şekilde
+        ayarlayabiliyoruz. */
+    }
+}

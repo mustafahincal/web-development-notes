@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Positioning</title>
+
+    <style>
+        /*  -relative dediğimiz zaman div normal akış içinde bulunduğu konumdan itibaren
+        hizalanmaya başlar.
+        #box2{
+            background-color: blue;
+            position: relative;
+            top: 30px;
+            left: 30px;
+        }
+            -absolute dediğimiz anda div normal akışın dışına cıkar ve hizalama işlemi
+        en üstden ve en üst soldan hizalanır.
+        #box2{
+            background-color: blue;
+            position: absolute;
+            top: 30px;
+            left: 30px;
+        }
+            -2 tane div düşünelim 2. div in içinde bir div var box olarak. buna yine
+        absolute dediğimiz zaman 1.div in içindeymiş gibi görünür yani sayfa başından
+        itibaren hizalanmaya devam eder. Ama eğer biz 2. div in içinden hizalanmasını
+        istersek ya direk uyguladığımız div i relative yapacaz yada içinde bulunduğu
+        div i relative yapmamız da yeterli.
+        #box{
+            background-color: blue;
+            position: absolute;
+            top: 30px;
+            left: 30px;
+        }
+        #div2{
+            position: relative;
+            background-color: grey;
+        }
+            -fixed yaptığımız zaman etiketi nereye hizalandırırsak , scroll ile aşağı
+        yukarı kaydırsak bile orada kalmaya devam eder.
+        #box3{
+            background-color: green;
+            position: fixed;
+            bottom: 0;
+            right: 0;  
+        }
+            -sticky yaptığımız zaman içerik belirli bir yerden sonra sayfayı kaydırınca
+        yine beraber hareket eder. fixed ile benziyor biraz.
+          #box3 {
+            background-color: green;
+            position: sticky;
+            top: 10px;
+            üst de 10px boşluk lu bir şekilde sayfayla beraber hareket eder.
+          } 
+        */
+
+        .box{
+			width: 120px;
+			height: 120px;
+		}
+		
+		.mbox{
+			width: 30px;
+			height: 30px;
+			background: yellow;
+			position: absolute;
+			top: 50px;
+			left: 50px;
+		}
+		
+		#first{
+			background: red;
+			width: 100%;
+			
+			position: sticky;
+			top: 50px;
+		}
+		#second{
+			background: blue;	
+			position: relative;
+		}
+		#third{
+			background: green;
+			position: fixed;
+			bottom: 0;
+			right: 0;
+		}
+		 
+	</style>
+</head>
+<body>	
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel accusamus praesentium perspiciatis architecto tempora, rerum sunt quam totam aliquam, tempore hic delectus quasi id nostrum, optio rem. Velit enim, quod!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, totam. Amet repellat totam odio natus, quibusdam magnam aut animi maiores repudiandae? Facere adipisci, unde, ullam eius quos quasi tenetur mollitia.</p>
+	
+	<div class="box" id="first">box 1</div>
+
+	<div class="box" id="second">
+		<div class="mbox"></div>	
+	</div>
+
+	<div class="box" id="third">box 3</div>	
+	
+	<div style="height: 2000px;"></div> <!-- scroll bar cıksın diye-->
+	
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+        
+        html,
+        body {
+            scroll-behavior: smooth;
+        }
+        
+        nav {
+            background-color: rgb(255, 58, 9);
+            position: sticky;
+            /*fixed yaparsak akış dışına çıkıyor, onun için ekstra marginle uğraşmak zorunda kalırız.*/
+            top: 0;
+            width: 100%;
+        }
+        
+        nav a {
+            line-height: 50px;
+            color: #fff;
+            text-decoration: none;
+            padding: 0 20px;
+            display: inline-block;
+        }
+        
+        section {
+            scroll-margin-top: 55px;
+            height: calc(100vh - 55px);
+            /* nav fixed yaptığımızda nav section'ların üstünde kalıyor , normal olarak margin uygulamayı düşünebiliriz ama işe yaramaz.
+            O yüzden scroll-margin uygulayacağız.*/
+        }
+        
+        #home {
+            background-color: aquamarine;
+        }
+        
+        #about {
+            background-color: rgb(193, 127, 255);
+        }
+        
+        #blog {
+            background-color: rgb(255, 127, 227);
+        }
+        
+        #contact {
+            background-color: rgb(255, 127, 127);
+        }
+        
+        .top {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            padding: 0 20px;
+            line-height: 50px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+        
+        nav a.active {
+            border-bottom: 5px solid #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a class="link" href="#home">Ana Sayfa</a>
+        <a class="link" href="#about">Hakkımda</a>
+        <a class="link" href="#blog">Blog</a>
+        <a class="link" href="#contact">İletişim</a>
+    </nav>
+
+    <section id="home">Home</section>
+    <section id="about">About</section>
+    <section id="blog">Blog</section>
+    <section id="contact">Contact</section>
+
+    <a href="# " class="top ">Yukarı Çık</a>
+
+    <script src="scroll.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inline Css</title>
+
+    <style>
+
+        h1{
+            color: blue;
+            font-size: 50px;
+            text-align: center;
+        }
+
+        p{
+            color: orange;
+            font-size: 20px;
+            text-align: left;
+            border: 5px purple solid; 
+
+            /* burdakiler tüm p etiketine etki eder istersek aşağıda p etiketinin birini farklı yapmak 
+            istersek inline css uygulayarak yapabiliriz. */
+
+        }
+
+
+    </style>
+    
+</head>
+
+<!-- Sayfa da tüm p lerin değilde sadece 1 ini değiştirmek
+istersek değiştireceğimiz p etiketinin içine css kodunu yazmaya
+inline css diyoruz.-->
+
+<body>
+
+    <h1 style="border: 5px purple solid;">Web Geliştirme</h1>
+    <!-- border(özellik) deyip sınırın kalınlığı , rengi ve tipi ni boşluk koyarak yazıyoruz -->
+
+    <p style="color: red; text-align: right;">Komple Web Geliştirme Eğitimi</p>
+    <p>Komple Web Geliştirme Eğitimi</p>
+    <p style="border: none;">Komple Web Geliştirme Eğitimi</p>
+    <!-- border: none; diyerek sınırı kaldırık.-->
+    
+</body>
+
+
+</html>

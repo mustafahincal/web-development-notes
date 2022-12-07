@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Box Shadow</title>
+
+    <!--
+        box-shadow block elementin etrafındaki sınırlara uygulanır.
+        text-shadow ise direk yazıya uygulanır.
+    -->
+
+    <style>
+        body {
+            background-color: #f2f2f2;
+        }
+        
+        .card {
+            background-color: white;
+            width: 200px;
+            height: 200px;
+            border-radius: 2px;
+            margin: 20px;
+            display: inline-block;
+        }
+        
+        .card1 {
+            box-shadow: 10px 10px;
+            /* ilk parametre düşey için diğeri yatay için belirlenir. */
+        }
+        
+        .card2 {
+            box-shadow: 10px 10px 10px;
+            /* eklediğimiz 3. parametre bluur efect gibi bişey ekler daha güzel olabilir. */
+        }
+        
+        .card3 {
+            box-shadow: 10px 10px 10px 2px;
+            /* eklediğimiz 4. parametre gölgeye derinlik gibi birşey katar*/
+        }
+        
+        .card4 {
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
+            /* eklediğimiz 4. parametre(opacity) gölgedeki rengi alır izi kalır.*/
+        }
+        
+        .card5:hover {
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
+            /* hover sayesinde üzerine geldiğinde gölge cıkar.*/
+        }
+        
+        .card6 {
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5), 0px 3px 6px rgba(0, 0, 0, 0.8);
+            /* böyle 2 kere uygulayabiliriz kutu ön plana cıksın diye ama cok önemli değil. */
+        }
+        
+        .card7 {
+            border: solid 1px grey;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+            /* */
+        }
+        
+        .card8 {
+            box-shadow: 10px 10px 10px green;
+            /* gölgenin rengini de beliryebiliriz tabiki*/
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="card card1"></div>
+    <div class="card card2"></div>
+    <div class="card card3"></div>
+    <div class="card card4"></div>
+    <div class="card card5"></div>
+    <div class="card card6"></div>
+    <div class="card card7"></div>
+    <div class="card card8"></div>
+
+</body>
+
+</html>

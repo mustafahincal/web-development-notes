@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: "Open Sans", sans-serif;
+        }
+        
+        .header {
+            height: 95vh;
+            /* burda sayfa büyültülüp küçülmesine karşın boyutun sayfanın 
+            her zaman 95% kaplamasını istersek kullanırız. Responsive de detaylı görcez.
+                Burda amacımız background-image için cerceve oluşturmak.*/
+            background-image: linear-gradient (rgba(102, 255, 102, 0.7), rgba(230, 255, 230, 0.7)), url(img/bg.jpeg);
+            /* url(img/) diyerek arkaplan resmimizi aldık linear-gradient diyeyerek de
+            geçiş rengi vermiş olduk . bu geçiş renklerini w3schoolsdan html color picker
+            derse bulabiliriz. */
+            /* ancak resmimiz güzelce oturmaz çünkü boyutu uymaz . 
+            Onun için background-size : cover kullanırız . Sayfanın boyutuna göre
+            resmi ayarlar artan kısımları crop eder atar.*/
+            background-size: cover;
+            /* sayfamızı küçültüp büyütürken resmin nasıl küçüleceğini belirlyebiliriz
+            background-position: top; dersek sayfayı küçülttükçe diğer taraflar üst tarafa
+            doğru croplanır yani kesilir. */
+            background-position: center;
+            /* clip-path resimlerin veya herhangi bir html öğesinin görünür kısımlarının
+            kırpılmasını sağlayan bir özelliktir.*/
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+            position: relative;
+            /* koyacağımız resim boyutu küçük olursa kendini tekrarlar;
+                background-repeat : repeat; (default)
+                background-repeat : no-repeat; (tekrarlamaz)
+                background-repeat : repeat-x; (x ekseninde tekrar eder.) 
+                background-repeat : repeat-y;
+                background-repeat : space; (ekrana sığabildiği kadar sığdırmaya çalışır.)
+
+                aynı yere birden fazla background-image tanımlayabilirim;
+                background-image: url(star.png),url(emoji.png),url(bg.png)
+
+
+                background-clip ile vereceğim background-image ve background-color'un nereyi kapsayacağını belirleyebilirim.
+                background-clip : border-box; (default: border'ları da kapsar. border+padding+content)
+                background-clip: padding-box; (padding+content)
+                background-clip: content-box; (content : padding'leri almazz)
+                background-clip: text; (sadece Yazıya etki eder görmek için : color:transparent yapmamız gerekir. )
+                -webkit-background-clip:text; 
+
+
+           */
+        }
+        
+        .heading {
+            text-transform: uppercase;
+            /* hepsi büyük harf olsun*/
+            color: white;
+            position: absolute;
+            /* içinde bulunduğu etiketin position ınını relative yap. */
+            top: 50%;
+            left: 50%;
+            text-align: center;
+            transform: translate(-50%, -80%);
+            /* transform ile konumlandırma yapabiliriz. .heading class nın 50% si 
+            miktarında sola , 80% miktarında yukarı götürdük. 
+            Sağ ve aşağı +
+            Sol ve yukarı - 
+            */
+            /* 
+            position: relative;  
+            top: 50%;            yapmak da heading i tam ortaya koymak için yeterli.
+            text-align: center;
+            */
+        }
+        
+        .heading-main {
+            display: block;
+            font-size: 50px;
+            letter-spacing: 7px;
+        }
+        
+        .heading-sub {
+            display: block;
+            font-size: 30px;
+            letter-spacing: 3px;
+        }
+        
+        .logo-box {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+        }
+        
+        .logo {
+            height: 50px;
+            /* genişliği biz vermezsek yükseklikle orantılı şekilde ayarlar. */
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="logo-box">
+            <img class="logo" src="img/logo.png" alt="">
+        </div>
+
+        <h1 class="heading">
+
+            <span class="heading-main">Main Title</span>
+            <span class="heading-sub">Sub Title</span>
+
+        </h1>
+
+
+    </header>
+
+</body>
+
+</html>

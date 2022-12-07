@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Forms</title>
+
+</head>
+
+<body class="w-75 mx-auto my-4">
+
+    <form>
+
+        <!-- form-control class'ını eklememiz input'umuza şekil kazandırır.-->
+
+        <div class="form-group">
+
+            <label for="name">Name</label>
+            <input type="text" id="name" class="form-control" placeholder="Enter Name">
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" class="form-control" placeholder="Enter Email">
+            <small class="form-text text-muted">
+                please enter a correct email
+            </small>
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" class="form-control" placeholder="Enter password">
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="city">City</label>
+            <select name="city" id="city" class="form-control">
+                <option value="0">Istanbul</option>
+                <option value="1">Konya</option>
+                <option value="2">Ankara</option>
+                <option value="3">Kocaeli</option>
+            </select>
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="message">Message</label>
+            <textarea name="message" id="message" class="form-control" placeholder="Please Write Your Message"></textarea>
+
+        </div>
+
+        <div class="form-group">
+
+            <legend>Hobies</legend>
+
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox"> Running
+                </label>
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox"> Reading
+                </label>
+            </div>
+
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox"> Swimming
+                </label>
+            </div>
+
+        </div>
+
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="ch">
+            <label for="ch" class="custom-control-label">Check</label>
+        </div>
+
+        <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" id="rd">
+            <label for="rd" class="custom-control-label">Check</label>
+        </div>
+
+        <div>
+
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="cr1" name="example" class="custom-control-input ">
+                <label class="custom-control-label" for="cr1">Custom Radio 1</label>
+            </div>
+
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="cr2" name="example" class="custom-control-input">
+                <label class="custom-control-label" for="cr2">Custom Radio 1</label>
+            </div>
+
+        </div>
+
+        <div class="input-group mt-3">
+
+            <input type="text" class="form-control">
+
+            <div class="input-group-append">
+                <span class="input-group-text" id="ig">@gmail.com</span>
+            </div>
+
+        </div>
+
+        <div class="input-group mt-3">
+
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="ig">http:/mustafahincal.com/</span>
+            </div>
+
+            <input type="text" class="form-control">
+
+        </div>
+
+
+        <div class="clearfix mt-4">
+
+            <div class="w-50 float-left">
+
+                <div class="form-group">
+
+                    <label for="name">Name</label>
+                    <input type="text" id="name" class="form-control" placeholder="Enter Name">
+
+                </div>
+
+            </div>
+
+            <div class="w-50 float-left">
+
+                <div class="form-group pl-2">
+
+                    <label for="surname">Surname</label>
+                    <input type="text" id="surname" class="form-control" placeholder="Enter Surname">
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </form>
+
+
+
+
+
+    <script src=" https://code.jquery.com/jquery-3.3.1.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js " integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy " crossorigin="anonymous "></script>
+</body>
+
+</html>

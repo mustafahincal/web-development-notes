@@ -1,0 +1,161 @@
+
+
+#container{
+	width: 1140px;
+    /* ana cercevemize belli sabit bir genişlik verdik.*/
+    margin: 20px auto;
+    /* margin: auto; dersek direk ortalar(sağdan soldan eşit boşluk).
+       margin: 20px auto dersek 20px uygulayıp ortalar. */
+}
+
+body{
+    background-color: #f1f1f1;
+    font-family: 'Abel', sans-serif;
+    font-size: 15px;
+    color: #333;
+    line-height: 135%;
+}
+
+#blog-post-container{
+	width: 75%;	
+	float: left;
+    /* ana cercevemiz içinde 2 tane div i yan yana getircez . Bu yüzden genişlikleri
+    75% ve 25% yapmalıyız. */
+}
+
+#other-posts{
+	width: 25%;	
+	float: left;	
+    padding: 10px;
+}
+
+#author-box
+{
+    /*  border: 3px solid gray; */
+}
+
+.box{
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: white;
+
+    border-bottom-left-radius: 10px;  /* cerceve kenarları yuvartıldı. */
+    border-bottom-right-radius: 10px;
+
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.3);
+}
+
+.blog-post{
+	position: relative;
+}
+
+.date{
+	position: absolute;
+	right:50px;
+	top: 20px;
+    color: rgb(122, 121, 121);
+    font-size: 13px;
+}
+
+.tags{
+	margin: 0;
+	padding: 0;
+    /* dersek ul etiketinin varsayılan özellklerin de olan margin ve padding değerlerini
+    0 layıp yan yana getirdiğimz liste elemanlarını en soldan başlatabiliriz.*/
+}
+
+.tags li{
+	list-style: none;
+	display: inline;
+	margin-right: 5px;
+     /* 
+    liste elemanlarını yan yana yazmak için;
+    float: left; 
+    yazıp daha sonra görüntüyü düzeltmek için ul etiketinden sonra 
+    <div style="clear: both"></div>
+    yazsak da olur.
+    */
+}
+
+.tags li a{
+	text-decoration: none;
+}
+
+
+.blog-post img{
+    width: 100%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    /* div lere padding uyguladığımız 75% 25% kuralına uymaz ve yan yana 
+    duramazlar . yan yana durmaları için border-box deriz genel boyutu değişmez.
+    sadece border ve padding değerleri için geçerli.  */
+}
+
+h2{
+    margin-bottom: 20px;
+    font-size: 3em;  /* body deki değerin 3 katı */
+    margin-bottom: 20px;
+}
+
+p{
+    padding: 10px;
+}
+
+#author-box{
+    border-top: 2px solid black;
+    padding-top: 10px;
+}
+
+#author-box img{
+    border-radius: 50%;
+    float: left;
+}
+
+.author-text{
+    float: left;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+.blog-text{
+    margin-top: 15px;
+    font-size: 16px;
+    color: rgb(85, 76, 76);
+    line-height: 22px;
+}
+
+#share a{
+    color: grey;
+    text-decoration: none;
+    margin-right: 12px;
+    opacity: 0.6;       /* solukluk ayarı */
+}
+#share a:hover{
+    opacity: 1.2;
+}
+
+ul{
+    list-style: none;
+
+}
+ul li{
+    margin-bottom: 10px;
+}
+
+.header{
+    margin-bottom: 10px;
+    border-bottom: 1px solid grey;
+    padding-bottom: 10px;
+}
+
+.tag{
+    background-color: black;
+    color: white;
+    margin-left: 10px;
+    padding: 0px 5px;
+    border-radius: 5px;
+}

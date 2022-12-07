@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <title>Jquery</title>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+<body>
+
+    <p>Sıfırdan Web Developer Eğitimi</p>
+
+    <button id="slideUp">Slide Up</button>
+    <button id="slideDown">Slide Down</button>
+    <button id="slidetoggle">Toggle</button>
+    <br><br>
+    <button id="fadeIn">Fade In</button>
+    <button id="fadeOut">Fade Out</button>
+    <button id="fadeTo">Fade To</button>
+    <button id="fadetoggle">Toggle</button>
+
+
+    <script>
+        $(document).ready(function() {
+
+            $("#slideUp").click(function() {
+                $("p").slideUp("slow");
+            });
+
+            $("#slideDown").click(function() {
+                $("p").slideDown(1000, function() {
+                    alert("paragraf gösterildi");
+                });
+            });
+
+            $("#slidetoggle").click(function() {
+                $("p").slideToggle();
+            });
+
+            $("#fadeIn").click(function() {
+                $("p").fadeIn("slow");
+            });
+
+            $("#fadeOut").click(function() {
+                $("p").fadeOut(500, function() {
+                    alert("paragraf gizlendi");
+                });
+            });
+
+            $("#fadeTo").click(function() {
+                $("p").fadeTo("slow", 0.5);
+                // opacity ile oynuyoruz.
+            });
+
+            $("#fadetoggle").click(function() {
+                $("p").fadeToggle();
+            });
+
+
+        });
+    </script>
+
+
+</body>
+
+</html>
