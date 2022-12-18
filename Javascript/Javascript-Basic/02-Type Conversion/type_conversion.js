@@ -77,7 +77,7 @@ console.log(typeof val6);
 console.log(val6.length);
 // burda bir sayının uzunluğu olmadığı için console'a undefined yazar.
 //* val6 = parsInt("10");
-//* val6 = parsfloat("10.6");  da kullanabiliriz.
+//* val6 = parsFloat("10.6");  da kullanabiliriz.
 
 //? bool to number
 let val7;
