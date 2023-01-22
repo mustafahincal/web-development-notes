@@ -1,0 +1,17 @@
+.active {
+   background-color: black;
+   color: white;
+}
+
+.not-active {
+   background-color: blue;
+   color: yellow;
+}
+
+a {
+   text-decoration: none;
+}
+
+li {
+   list-style-type: square;
+}
