@@ -23,7 +23,18 @@ const User = ({ user }) => {
   );
 };
 
-// Generates `/posts/1` and `/posts/2`
+export async function getServerSideProps(context) {
+  const res = await fetch(
+    `https://jsonplaceholder.typicode.com/users/${context.params.id}`
+  );
+  const user = await res.json();
+
+  return { props: { user } };
+}
+
+//? ----------------------------------
+//* with getStaticProps;
+/* Generates `/posts/1` and `/posts/2`
 export async function getStaticProps(context) {
   const res = await fetch(
     `https://jsonplaceholder.typicode.com/users/${context.params.id}`
@@ -36,7 +47,8 @@ export async function getStaticProps(context) {
   };
 }
 
-// `getStaticPaths` requires using `getStaticProps`
+//* if we use getStaticProps we have to use getStaticPaths too.
+`getStaticPaths` requires using `getStaticProps`
 export async function getStaticPaths() {
   const res = await fetch(`https://jsonplaceholder.typicode.com/users`);
   const users = await res.json();
@@ -47,6 +59,6 @@ export async function getStaticPaths() {
     },
   }));
   return { paths, fallback: false };
-}
+} */
 
 export default User;

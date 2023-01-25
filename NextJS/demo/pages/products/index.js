@@ -1,4 +1,6 @@
+import Image from "next/image";
 import React from "react";
+import test from "../../public/test.jpeg";
 
 const Products = ({ products }) => {
   return (
@@ -19,6 +21,7 @@ const Products = ({ products }) => {
           <span style={{ display: "block" }}> {product.price} </span>
         </div>
       ))}
+      <Image style={{ display: "block" }} src={test} />
     </div>
   );
 };
