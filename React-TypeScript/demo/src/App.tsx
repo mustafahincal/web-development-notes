@@ -6,6 +6,8 @@ function App() {
 
 export default App;
 
+//? --------------------------------
+
 const name: string = "Mustafa Hıncal";
 const age: number = 29;
 const isValid: boolean = true;
