@@ -2,10 +2,12 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
+import { useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const [count, setCount] = useState(0);
   return (
     <>
       <Head>
@@ -16,7 +18,26 @@ export default function Home() {
         <meta name="author" content="mustafahincal" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      Hello Next JS
+      <div className="container">
+        <button onClick={() => setCount((prev) => --prev)}>Decrease</button>
+        <h1>{count}</h1>
+        <button onClick={() => setCount((prev) => ++prev)}>Increase</button>
+      </div>
+      <h2 className="title">Home</h2>
+      <style jsx>
+        {`
+          .container {
+            display: flex;
+            gap: 10px;
+            margin: 30px 0;
+          }
+          .title {
+            color: ${count > 0 ? "red" : "cyan"};
+            margin: 20px 0;
+            font-size: ${count + 30}px;
+          }
+        `}
+      </style>
     </>
   );
 }
