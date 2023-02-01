@@ -1,15 +1,15 @@
 import Head from "next/head";
 import React from "react";
 
-const Product = () => {
+const About = () => {
   return (
     <div>
       <Head>
-        <title>Product Page</title>
+        <title>About Page</title>
       </Head>
-      Product
+      About
     </div>
   );
 };
 
-export default Product;
+export default About;
