@@ -23,7 +23,6 @@ export default function Home() {
         <h1>{count}</h1>
         <button onClick={() => setCount((prev) => ++prev)}>Increase</button>
       </div>
-      <h2 className="title">Home</h2>
       <style jsx>
         {`
           .container {
@@ -32,7 +31,7 @@ export default function Home() {
             margin: 30px 0;
           }
           .title {
-            color: ${count > 0 ? "red" : "cyan"};
+            color: ${count > 0 ? "yellow" : "cyan"};
             margin: 20px 0;
             font-size: ${count + 30}px;
           }
