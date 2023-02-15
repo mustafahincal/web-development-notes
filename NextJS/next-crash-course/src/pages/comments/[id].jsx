@@ -1,20 +1,38 @@
+import { useRouter } from "next/router";
 import React from "react";
 
 const Comment = ({ comment }) => {
+  const router = useRouter();
+
   return (
-    <h1
-      style={{
-        backgroundColor: "white",
-        color: "black",
-        padding: "10px 20px",
-        margin: "20px 0",
-      }}
-    >
-      <span> {comment.id} </span> - <span> {comment.email} </span>
-    </h1>
+    <div>
+      <button
+        onClick={() => router.back()}
+        style={{
+          padding: "10px 20px",
+          marginTop: "30px",
+          backgroundColor: "white",
+          color: "black",
+          cursor: "pointer",
+        }}
+      >
+        Back
+      </button>
+      <h1
+        style={{
+          backgroundColor: "white",
+          color: "black",
+          padding: "10px 20px",
+          margin: "20px 0",
+        }}
+      >
+        <span> {comment.id} </span> - <span> {comment.email} </span>
+      </h1>
+    </div>
   );
 };
 
+//* Instead of server side props, we could do this as client side, so we could pull data in useEffect and keep it with a state, just like we do in react. But its much better to use getServerSideProps
 export async function getServerSideProps(context) {
   const result = await fetch(
     `https://jsonplaceholder.typicode.com/comments/${context.params.id}`
