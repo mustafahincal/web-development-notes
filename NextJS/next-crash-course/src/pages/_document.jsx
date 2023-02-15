@@ -20,4 +20,4 @@ export default function Document() {
   );
 }
 //* we use this Head tag in _document when we want something to do every page. For example, i wanna use an icon from fontawesome and i need a cdn. We can write the link this Head
-//! do not add style and title here and cant be data fetching in _document
+//! do not add style and title here and cant be fetched data in _document

@@ -1,13 +1,36 @@
+import { useRouter } from "next/router";
 import React from "react";
 
 const Comments = ({ comments }) => {
+  const router = useRouter();
   return (
     <div>
       {comments.map((comment) => (
-        <div key={comment.id} style={{ margin: "10px" }}>
-          {comment.email}
+        <div key={comment.id} className="comment-wrap">
+          <button
+            onClick={() => router.push(`/comments/${comment.id}`)}
+            className="btn"
+          >
+            Detail
+          </button>
+          <h2>{comment.email}</h2>
         </div>
       ))}
+
+      <style jsx>
+        {`
+          .btn {
+            padding: 10px 20px;
+            cursor: pointer;
+          }
+          .comment-wrap {
+            display: flex;
+            gap: 1rem;
+            margin-top: 20px;
+            align-items: center;
+          }
+        `}
+      </style>
     </div>
   );
 };
@@ -23,5 +46,17 @@ export async function getStaticProps(context) {
     },
   };
 }
+
+//* we can use getServerSideProps here also
+//! but we cant use getStaticProps in [id].jsx pages
+/* export async function getServerSideProps(context) {
+  const result = await fetch("https://jsonplaceholder.typicode.com/comments");
+  const comments = await result.json();
+  return {
+    props: {
+      comments,
+    },
+  };
+} */
 
 export default Comments;

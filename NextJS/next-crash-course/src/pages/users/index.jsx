@@ -12,9 +12,9 @@ const Users = ({ users }) => {
   );
 };
 
-//* getStaticProps works on the server side, reprocess every request, runs every request
+//* getServerSideProps works on the server side, reprocess every request, runs every request
 //* use on data that change much
-export async function getServerSideProps(context) {
+export async function getServerSideProps() {
   const result = await fetch("https://jsonplaceholder.typicode.com/users");
   const users = await result.json();
 
