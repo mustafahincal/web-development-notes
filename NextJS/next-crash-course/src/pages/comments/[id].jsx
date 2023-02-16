@@ -33,7 +33,21 @@ const Comment = ({ comment }) => {
 };
 
 //* Instead of server side props, we could do this as client side, so we could pull data in useEffect and keep it with a state, just like we do in react. But its much better to use getServerSideProps
-export async function getServerSideProps(context) {
+/* export async function getServerSideProps(context) {
+  const result = await fetch(
+    `https://jsonplaceholder.typicode.com/comments/${context.params.id}`
+  );
+  const comment = await result.json();
+  return {
+    props: {
+      comment,
+    },
+  };
+} */
+
+//! we cant use getStaticProps in [id].jsx pages, getStaticPaths is required for dynamic SSG pages and is missing for '/comments/[id]'.
+//* if we wanna use getStaticProps we must use with getStaticPaths
+export async function getStaticProps(context) {
   const result = await fetch(
     `https://jsonplaceholder.typicode.com/comments/${context.params.id}`
   );
@@ -45,17 +59,20 @@ export async function getServerSideProps(context) {
   };
 }
 
-//! we cant use getStaticProps in [id].jsx pages, getStaticPaths is required for dynamic SSG pages and is missing for '/comments/[id]'.
-/* export async function getStaticProps(context) {
-  const result = await fetch(
-    `https://jsonplaceholder.typicode.com/comments/${context.params.id}`
-  );
-  const comment = await result.json();
-  return {
-    props: {
-      comment,
+//* we use getStaticPaths to define dynamic routes like id
+export async function getStaticPaths() {
+  const result = await fetch(`https://jsonplaceholder.typicode.com/comments`);
+  const comments = await result.json();
+  const ids = comments.map((comment) => comment.id);
+  const paths = ids.map((id) => ({
+    params: {
+      id: id.toString(),
     },
+  }));
+  return {
+    paths,
+    fallback: false,
   };
-} */
+}
 
 export default Comment;
