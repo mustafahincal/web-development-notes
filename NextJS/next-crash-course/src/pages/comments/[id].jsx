@@ -1,3 +1,4 @@
+import Meta from "@/components/Meta";
 import { useRouter } from "next/router";
 import React from "react";
 
@@ -6,6 +7,7 @@ const Comment = ({ comment }) => {
 
   return (
     <div>
+      <Meta title={comment?.email} />
       <button
         onClick={() => router.back()}
         style={{

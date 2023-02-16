@@ -1,3 +1,4 @@
+import Meta from "@/components/Meta";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import React from "react";
@@ -20,6 +21,7 @@ const Posts = ({ posts }) => {
   };
   return (
     <div>
+      <Meta title="Posts" description="post description" />
       <button onClick={addPost} className="btn" style={{ marginTop: "30px" }}>
         Add Post
       </button>

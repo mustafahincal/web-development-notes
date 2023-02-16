@@ -1,3 +1,4 @@
+import Meta from "@/components/Meta";
 import { useRouter } from "next/router";
 import React from "react";
 
@@ -5,6 +6,11 @@ const Comments = ({ comments }) => {
   const router = useRouter();
   return (
     <div>
+      <Meta
+        title="Comments"
+        description="comment description"
+        keywords="comment keywords"
+      />
       {comments.map((comment) => (
         <div key={comment.id} className="comment-wrap">
           <button
