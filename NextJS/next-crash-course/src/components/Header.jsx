@@ -39,6 +39,15 @@ const Header = () => {
         </span>
         <span
           style={{
+            marginRight: "20px",
+            border: "1px solid black",
+            padding: "10px",
+          }}
+        >
+          <Link href="/posts">Posts</Link>
+        </span>
+        <span
+          style={{
             border: "1px solid black",
             padding: "10px",
           }}

@@ -37,6 +37,7 @@ const Comments = ({ comments }) => {
 
 //* getStaticProps works on the server side, but doesn't reprocess every request, just runs at build time.
 //* use on data that won't change much
+//* when we build the application, we will see the data in html page because data fetched in build time it makes the application very fast.
 export async function getStaticProps(context) {
   const result = await fetch("https://jsonplaceholder.typicode.com/comments");
   const comments = await result.json();
