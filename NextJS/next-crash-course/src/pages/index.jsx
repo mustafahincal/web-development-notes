@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
-import styles from "@/styles/Home.module.css";
 import { useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -23,6 +22,21 @@ export default function Home() {
         <h1>{count}</h1>
         <button onClick={() => setCount((prev) => ++prev)}>Increase</button>
       </div>
+
+      <div className="image-container">
+        <Image src={"/images/view.jpg"} alt="" fill objectFit="cover" />
+      </div>
+      <div className="image-container">
+        <Image
+          src={
+            " https://images.unsplash.com/photo-1676402519263-54dc34265e12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+          }
+          alt=""
+          fill
+          objectFit="cover"
+        />
+      </div>
+
       <style jsx>
         {`
           .container {
@@ -35,24 +49,38 @@ export default function Home() {
             margin: 20px 0;
             font-size: ${count + 30}px;
           }
+          .image-container {
+            height: 500px;
+            position: relative;
+          }
         `}
       </style>
     </>
   );
 }
 
+//? Head
 //* we can use Head tag in next js
 //* just use for page components not other components
 //* this is important for SEO
 
+//? Image
+//* Image default properties; absolute. So if we dont cover with relative tag it fill all screen.
+//* I think best use, give layout="fill" (it has been changed to just fill) instead of giving width and height. Cover it with a div and make it relative and design sizes.
+//* if we take image from web, we must define its domain in next.config.js
+
+//? routing
 //* we use index.js for default -> localhost:3000
 
+//? _
+//* but if the file name is _login.js, this is not routed because of _
+//* we can use _ to make normal components not page components
+
+//? routing
 //* if we create a file in pages, they are routed like these;
 //* login.js in pages folder -> localhost:3000/login
 //* signup.js in pages folder -> localhost:3000/signup
 
-//* but if the file name is _login.js, this is not routed because of _
-//* we can use _ to make normal components not page components
-
+//? routing
 //* index.js in product folder in pages folder -> localhost:3000/product
 //* addProduct.js in product folder in pages folder -> localhost:3000/product/addProduct
