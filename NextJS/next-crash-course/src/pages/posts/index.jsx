@@ -1,7 +1,10 @@
 import Head from "next/head";
+import { useRouter } from "next/router";
 import React from "react";
 
 const Posts = ({ posts }) => {
+  const router = useRouter();
+
   const addPost = async () => {
     await fetch("http://localhost:3000/api/posts/addPost", {
       method: "POST",
@@ -17,12 +20,20 @@ const Posts = ({ posts }) => {
   };
   return (
     <div>
-      <button onClick={addPost} className="btn">
+      <button onClick={addPost} className="btn" style={{ marginTop: "30px" }}>
         Add Post
       </button>
       {posts.map((post) => (
         <div key={post.id} className="comment-wrap">
-          <div>{post.id}</div>-<h2>{post.title}</h2>
+          <button
+            onClick={() => router.push(`/posts/${post.id}`)}
+            className="btn"
+          >
+            Detail
+          </button>
+          <h2>
+            {post.id} - {post.title}
+          </h2>
         </div>
       ))}
 
@@ -30,13 +41,12 @@ const Posts = ({ posts }) => {
         {`
           .btn {
             padding: 10px 20px;
-            margin-top: 20px;
             cursor: pointer;
           }
           .comment-wrap {
             display: flex;
-            gap: 1rem;
-            margin-top: 20px;
+            gap: 1.5rem;
+            margin-top: 30px;
             align-items: center;
           }
         `}
@@ -46,7 +56,7 @@ const Posts = ({ posts }) => {
 };
 
 export async function getServerSideProps(context) {
-  const result = await fetch("http://localhost:3000/api/posts/getAll");
+  const result = await fetch("http://localhost:3000/api/posts");
   const posts = await result.json();
   return {
     props: {

@@ -9,7 +9,12 @@ const Header = () => {
     <div>
       <h1 className={styles.title}>Header</h1>
       <div
-        style={{ backgroundColor: "white", color: "black", padding: "20px" }}
+        style={{
+          backgroundColor: "white",
+          color: "black",
+          padding: "20px",
+          display: "inline-block",
+        }}
       >
         <span
           style={{
@@ -48,15 +53,6 @@ const Header = () => {
         </span>
         <span
           style={{
-            border: "1px solid black",
-            padding: "10px",
-          }}
-        >
-          <Link href="/products">Products</Link>
-        </span>
-        <span
-          style={{
-            marginLeft: "20px",
             border: "1px solid black",
             padding: "10px",
             cursor: "pointer",
