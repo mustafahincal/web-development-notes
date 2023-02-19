@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+   .btn {
+      @apply py-3 px-6;
+   }
+
+   .nav-link {
+      @apply flex items-center h-10 rounded px-3 text-sm font-medium text-prototurk  hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white transition-opacity;
+   }
+
+   .nav-link.active {
+      @apply bg-prototurk text-white;
+   }
+
+   .modal {
+      @apply bg-prototurk inset-0 fixed  flex items-center justify-center bg-opacity-0 invisible transition-opacity z-50;
+   }
+
+   .modal.active {
+      @apply visible bg-opacity-50;
+   }
+
+   .modal-content {
+      @apply bg-white max-w-full min-w-[600px] p-10 rounded dark:bg-gray-800 dark:text-white;
+   }
+
+   .slider-item {
+      @apply border-2 flex flex-col items-center  px-4 py-7 rounded border-gray-200 dark:border-gray-700;
+   }
+   .sidebar {
+      @apply w-full h-full scale-90 lg:scale-100  absolute lg:relative top-15 lg:top-0 inset-0  opacity-0 lg:opacity-100 invisible lg:visible  flex-shrink-0 lg:w-64 p-3 border-r border-gray-100 flex flex-col overflow-auto dark:border-gray-800 transition-all;
+   }
+   .sidebar.active {
+      @apply bg-white z-10 opacity-100 visible scale-100;
+   }
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html id="html" class="h-full">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link href="/dist/output.css" rel="stylesheet" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   </head>
+   <body class="bg-white h-full flex flex-col font-poppins dark:bg-gray-900 dark:text-white ">
+      <nav
+         class="h-14 border-b flex-shrink-0 border-gray-100 w-full flex justify-between py-7 px-5 md:px-10 items-center dark:border-gray-700"
+      >
+         <div onclick="sideBar()" class="block lg:hidden text-2xl cursor-pointer">
+            <i class="fa-solid fa-bars"></i>
+         </div>
+         <div>
+            <a
+               href="#"
+               class="text-prototurk text-2xl font-semibold flex items-center dark:text-white"
+               >./prototurk
+               <span class="text-xs text-gray-400 ml-2 dark:text-gray-300 hidden lg:inline">v2.5.0</span></a
+            >
+         </div>
+         <form class="w-1/2 hidden lg:block">
+            <input
+               class="rounded-md bg-gray-100 w-full py-2 px-3 placeholder-gray-500 outline-none dark:bg-gray-700 dark:placeholder-gray-300"
+               type="text"
+               placeholder="Ara"
+            />
+         </form>
+         <div class="hidden">
+            <a
+            id="loginBtn"
+               class="btn text-white bg-prototurk h-10  items-center rounded-lg px-5"
+               href="#"
+               >Giriş yap</a
+            >
+         </div>
+         <div class="group relative">
+            <button class="flex items-center bg-gray-100 h-10 px-4 text-sm dark:bg-prototurk">
+               <img src="./images/pp.jpg" class="object-cover object-to p rounded-full mr-3" width="25" height="25" alt="">
+               <span class=" hidden lg:inline">Mustafa Hıncal</span>
+               <i class="fa-solid fa-caret-down ml-3"></i>
+            </button>
+            <div class="invisible absolute top-full right-0 w-56 rounded p-1  bg-gray-100 flex flex-col space-y-2 z-10 group-focus-within:visible group-focus-within:mt-2   transition-all dark:bg-prototurk ">
+               <a onclick="modal()" href="javascript:;" class="text-sm inline-flex h-8 items-center px-3 rounded hover:bg-gray-200 dark:hover:text-prototurk">Profile</a>
+               <a href="#" class="text-sm inline-flex h-8 items-center px-3 rounded hover:bg-gray-200 dark:hover:text-prototurk">Profil Düzenle</a>
+               <a href="#" class="text-sm inline-flex h-8 items-center px-3 rounded hover:bg-gray-200 dark:hover:text-prototurk">Takipçiler</a>
+               <a href="#" class="text-sm inline-flex h-8 items-center px-3 rounded hover:bg-gray-200 dark:hover:text-prototurk">Sorular</a>
+               <a href="#" class="text-sm inline-flex h-8 items-center px-3 text-red-500  rounded hover:bg-red-500 dark:hover:text-white">Çıkış Yap</a>
+            </div>
+         </div>
+      </nav>
+
+      <main class="calc-h-full-15 flex">
+         <aside class="sidebar">
+            <nav class="mb-4 space-y-1">
+               <a href="#" class="nav-link active" >Anasayfa</a>
+               <a href="#" class="nav-link">Akış</a>
+               <a href="#" class="nav-link">Keşfet</a>
+               <a href="#" class="nav-link">Makaleler</a>
+               <a href="#" class="nav-link">Soru & Cevap</a>
+            </nav>
+            <hr class="dark:border-gray-800">
+            <nav class="mt-4 space-y-1">
+               <a href="#" class="nav-link" >HTML</a>
+               <a href="#" class="nav-link">CSS</a>
+               <a href="#" class="nav-link">Javascript</a>
+               <a href="#" class="nav-link">PHP</a>
+               <a href="#" class="nav-link">MySQL</a>
+               <a href="#" class="nav-link">Laravel</a>
+               <a href="#" class="nav-link">Python   </a>
+               <a href="#" class="nav-link">Git</a>
+            </nav>
+
+            <a href="#" onclick="darkMode()" class="flex-shrink-0 mt-auto h-10 inline-flex items-center bg-gray-800 pl-8 text-white rounded-md text-sm hover:bg-gray-700 transition-colors dark:text-gray-900 dark:bg-white">
+               <span class="block dark:hidden"> <i class="fa-solid fa-moon mr-3"></i></i>Koyu Mod</span>
+               <span class="hidden dark:block"> <i class="fa-light fa fa-sun mr-3"></i></i>Açık Mod</span>
+            </a>
+
+         </aside>
+         <section class="flex-auto py-6 px-5 md:px-10 overflow-y-hidden overflow-auto">
+
+            <div class="mx-auto max-w-screen-xl">
+               <h1 class="text-3xl font-bold mb-4 leading-relaxed">Kendinize Değer Katın</h1>
+               <p>İyi bir kariyer için, doğru bir başlangıç gerekir. Prototürk'de bir çok dil ve teknolojiye ait derslerle doğru bir başlangıç yapmaya hazırsın!</p>
+               <div class="flex overflow-x-auto lg:grid grid-cols-10 my-5 gap-4">
+                  <div class="col-span-5 lg:col-span-2">
+                     <a href="#" class="slider-item group hover:!border-red-300">
+                        <span class="h-24 w-24 border border-red-300 rounded-full inline-flex justify-center items-center relative">
+                           <span class="absolute w-24 h-24 bg-red-400 rounded-full -top-3 -right-3 opacity-10 -z-10"></span>
+                           <i class="fa-brands fa-html5 text-red-400 text-6xl"></i>
+                        </span>
+                        <span class="inline-flex h-8 px-7 text-white rounded-md bg-red-500 mt-5 items-center group-hover:bg-red-400 transition-colors" >HTML</span>     
+                     </a>
+                  </div>
+                  <div class="col-span-5 lg:col-span-2">
+                     <a href="#" class="slider-item group hover:!border-blue-300">
+                        <span class="h-24 w-24 border border-blue-300 rounded-full inline-flex justify-center items-center relative">
+                           <span class="absolute w-24 h-24 bg-blue-400 rounded-full -top-3 -right-3 opacity-10 -z-10"></span>
+                           <i class="fa-brands fa-css3-alt text-6xl text-blue-400"></i>
+                        </span>
+                        <span class="inline-flex h-8 px-7 text-white rounded-md bg-blue-500 mt-5 items-center" >CSS</span>
+                     </a>
+                  </div>
+                  <div class="col-span-5 lg:col-span-2">
+                     <a href="#" class="slider-item group hover:!border-yellow-300">
+                        <span class="h-24 w-24 border border-yellow-300 rounded-full inline-flex justify-center items-center relative">
+                           <span class="absolute w-24 h-24 bg-yellow-400 rounded-full -top-3 -right-3 opacity-10 -z-10"></span>
+                           <i class="fa-brands fa-js text-yellow-400 text-6xl"></i>
+                        </span>
+                        <span class="inline-flex h-8 px-7 text-white rounded-md bg-yellow-400 mt-5 items-center" >Javascript</span>
+                     </a>
+                  </div>
+                  <div class="col-span-5 lg:col-span-2">
+                     <a href="#" class="slider-item group hover:!border-indigo-300">
+                        <span class="h-24 w-24 border border-indigo-300 rounded-full inline-flex justify-center items-center relative">
+                           <span class="absolute w-24 h-24 bg-indigo-400 rounded-full -top-3 -right-3 opacity-10 -z-10"></span>
+                           <i class="fa-brands fa-php text-indigo-400 text-6xl"></i>
+                        </span>
+                        <span class="inline-flex h-8 px-7 text-white rounded-md bg-indigo-500 mt-5 items-center" >PHP</span>
+                     </a>
+                  </div>
+                  <div class="col-span-5 lg:col-span-2">
+                     <a href="#" class="slider-item group hover:!border-cyan-300">
+                        <span class="h-24 w-24 border border-cyan-400 rounded-full inline-flex justify-center items-center relative">
+                           <span class="absolute w-24 h-24 bg-cyan-400 rounded-full -top-3 -right-3 opacity-10 -z-10"></span>
+                           <i class="fa-solid fa-house-tsunami text-6xl text-cyan-300"></i>
+                        </span>
+                        <span class="inline-flex h-8 px-7 text-white rounded-md bg-cyan-500 mt-5 items-center" >MySQL</span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+
+            <div class="bg-gradient-to-b from-twitter to-blue-300 p-7 rounded-md mt-auto text-white flex flex-col items-center lg:flex-row">
+               <div class="flex-shrink-0 mr-8 inline-flex items-center relative mb-8">
+                  <i class="fa-brands fa-twitter text-5xl"></i>
+                  <span class="absolute h-15 w-15 bg-blue-100 opacity-10 top-5 left-2 rounded-full"></span>
+               </div>
+               <div>
+                  <h6 class="text-2xl font-semibold mb-2">Twitter'da @prototurkcom hesabını takip etmeyi unutma!</h6>
+                  <p class="mb-3">Hazırladığımız son videolardan anında haberdar olmak için twitter hesabımızı takip etmeyi unutma!</p>
+                  <a href="#" class="bg-white h-10 inline-flex items-center text-black px-4 rounded">Takip et</a>
+               </div>
+               
+            </div>
+            
+         </section>
+      </main>
+
+      <div id="modal" class="modal">
+         <div class="modal-content">
+            <h3 class="text-gray-900 text-2xl mb-10 dark:text-white">Giriş Yap</h3>
+            <button onclick="modal()" class="flex items-center h-12 px-5 bg-prototurk rounded-md text-white"> Kapat </button>
+         </div>
+      </div>
+
+      <script>
+         if(localStorage.getItem("dark")){
+            document.getElementById("html").classList.add("dark");
+         }
+         function darkMode(){
+            document.getElementById("html").classList.toggle("dark");
+            if(document.getElementById("html").classList.contains("dark")){
+               localStorage.setItem("dark",true);
+            }else{
+               localStorage.removeItem("dark");
+            }
+         }
+
+         function modal(){
+            document.getElementById("modal").classList.toggle("active");
+         }
+         
+         // function modal(id){
+         //    document.getElementById(id).classList.toggle("active")
+         // }
+
+         function sideBar(){
+            document.querySelector(".sidebar").classList.toggle("active");
+         }
+
+      </script>
+   </body>
+</html>

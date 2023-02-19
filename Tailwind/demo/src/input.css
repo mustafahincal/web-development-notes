@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+   @apply px-5 h-20 flex justify-center items-center rounded-xl hover:text-white transition-all duration-300;
+}
+
+/** burada ve html'de yazdığım aynı yere etki edecek olan css'lerin html'de yazdığımın üstün gelmesini istersem*/
+/* @layer components {
+   .btn {
+      @apply px-5 h-20 flex justify-center items-center rounded-xl hover:text-white transition-all duration-300;
+   }
+} */

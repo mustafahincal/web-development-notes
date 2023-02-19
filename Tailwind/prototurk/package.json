@@ -1,0 +1,9 @@
+{
+   "scripts": {
+      "build-css": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+   },
+   "devDependencies": {
+      "lodash": "^4.17.21",
+      "tailwindcss": "^3.0.24"
+   }
+}
