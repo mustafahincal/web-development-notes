@@ -1,7 +1,11 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./App.css";
-import { decrement, increment, incrementMore } from "./redux/counter/counter";
+import {
+  decrement,
+  increment,
+  incrementMore,
+} from "./redux/counter/counterSlice";
 
 function App() {
   const { value } = useSelector((state) => state.counter);
