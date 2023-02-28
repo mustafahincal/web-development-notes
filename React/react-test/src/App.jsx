@@ -17,6 +17,11 @@ function App() {
   const test = () => {
     console.log(users);
   };
+
+  const typingHandler = (e) => {
+    console.log(e.key);
+  };
+
   return (
     <div>
       <form onSubmit={formHandle}>
@@ -24,13 +29,7 @@ function App() {
           type="text"
           placeholder="firstname"
           value={firstName}
-          onChange={(e) => setFirstName(e.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="lastname"
-          value={lastName}
-          onChange={(e) => setLastName(e.target.value)}
+          onChange={typingHandler}
         />
         <button type="submit">Submit</button>
       </form>
