@@ -1,9 +1,7 @@
 import { useRouter } from "next/router";
-import React, { useEffect } from "react";
 
 const CommentTest = () => {
   const router = useRouter();
-  console.log(router);
   return <div>CommentTest</div>;
 };
 

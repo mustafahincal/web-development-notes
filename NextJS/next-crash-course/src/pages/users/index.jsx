@@ -1,6 +1,3 @@
-import Meta from "@/components/Meta";
-import React from "react";
-
 const Users = ({ users }) => {
   return (
     <div>

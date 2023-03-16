@@ -1,6 +1,5 @@
 import Meta from "@/components/Meta";
 import { useRouter } from "next/router";
-import React from "react";
 
 const Comments = ({ comments }) => {
   const router = useRouter();
