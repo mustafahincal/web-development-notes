@@ -53,6 +53,7 @@ export async function getStaticProps(context) {
   const result = await fetch(
     `https://jsonplaceholder.typicode.com/comments/${context.params.id}`
   );
+  console.log(context);
   const comment = await result.json();
   return {
     props: {
@@ -62,7 +63,7 @@ export async function getStaticProps(context) {
 }
 
 //* we use getStaticPaths to define dynamic routes like id
-export async function getStaticPaths() {
+/* export async function getStaticPaths() {
   const result = await fetch(`https://jsonplaceholder.typicode.com/comments`);
   const comments = await result.json();
   const ids = comments.map((comment) => comment.id);
@@ -75,6 +76,6 @@ export async function getStaticPaths() {
     paths,
     fallback: false,
   };
-}
+} */
 
 export default Comment;
