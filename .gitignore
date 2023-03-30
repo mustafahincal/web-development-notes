@@ -27,6 +27,9 @@ lib-cov
 coverage
 *.lcov
 
+.env
+.env.local
+
 # nyc test coverage
 .nyc_output
 
