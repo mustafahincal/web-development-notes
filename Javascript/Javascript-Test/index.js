@@ -1,11 +1,2 @@
-const testButton = document.querySelector("#test-button");
-const input = document.querySelector("#test-input");
-
-let test = input.value;
-testButton.addEventListener("click", function () {
-  console.log(test);
-});
-
-input.addEventListener("keydown", (e) => {
-  console.log(e.key);
-});
+const testArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log(testArray[-4]);
