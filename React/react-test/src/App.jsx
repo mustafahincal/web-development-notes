@@ -1,39 +1,36 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 function App() {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [users, setUsers] = useState([
-    {
-      uname: "",
-      usurname: "",
-    },
-  ]);
-
-  const formHandle = (e) => {
-    setUsers([...users, { uname: firstName, usurname: lastName }]);
-    e.preventDefault();
-  };
-  const test = () => {
-    console.log(users);
-  };
+  const [name, setName] = useState("");
+  const testInput = useRef(null);
+  const isMounted = useRef(false);
 
   const typingHandler = (e) => {
     console.log(e.key);
   };
 
+  useEffect(() => {
+    if (!isMounted.current) {
+      isMounted.current = true;
+      return;
+    }
+    console.log("re-rendered");
+  }, [name]);
+
+  const handleFormSubmit = () => {
+    console.log(testInput.current.value);
+  };
+
   return (
     <div>
-      <form onSubmit={formHandle}>
-        <input
-          type="text"
-          placeholder="firstname"
-          value={firstName}
-          onChange={typingHandler}
-        />
-        <button type="submit">Submit</button>
-      </form>
-      <button onClick={test}>Test</button>
+      <button type="submit" onClick={handleFormSubmit}>
+        Submit
+      </button>
+      <input
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        ref={testInput}
+      ></input>
     </div>
   );
 }
