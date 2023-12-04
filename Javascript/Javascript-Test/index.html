@@ -5,10 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
+    <style>
+      .listitem {
+        background-color: red !important;
+      }
+      #selecteditem {
+        background-color: green;
+      }
+      .list .listitem:first-child {
+        background-color: blue;
+      }
+    </style>
   </head>
   <body>
-    <input id="test-input" type="text" name="message" />
-    <button id="test-button">test</button>
+    <ul class="list">
+      <li class="listitem" id="selecteditem">a</li>
+      <li class="listitem">b</li>
+      <li class="listitem">c</li>
+    </ul>
 
     <script src="index.js"></script>
   </body>

@@ -1,2 +1,6 @@
-const testArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-console.log(testArray[-4]);
+function example() {
+  for (i = 0; i < 100; i++);
+}
+var i = 2;
+example();
+console.log(i);
